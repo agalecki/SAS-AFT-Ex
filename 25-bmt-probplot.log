@@ -1,0 +1,113 @@
+1                                         The SAS System           17:08 Saturday, October 30, 2021
+
+NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
+      Licensed to UNIVERSITY OF MICHIGAN - T&R - SFA, Site 70082420.
+NOTE: This session is executing on the X64_10PRO  platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.2
+      SAS/ETS 14.2
+      SAS/OR 14.2
+      SAS/IML 14.2
+      SAS/QC 14.2
+
+NOTE: Additional host information:
+
+ X64_10PRO WIN 10.0.18362  Workstation
+
+NOTE: SAS initialization used:
+      real time           0.25 seconds
+      cpu time            0.29 seconds
+      
+1          %let cdir_path=.;   /* Path to current directory */
+2          
+3          filename bmtdata "&cdir_path\inc\create-bmt-data.sas";
+4          %include bmtdata;
+
+NOTE: There were 137 observations read from the data set SASHELP.BMT.
+NOTE: The data set WORK.BMT has 137 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+
+22         
+23         /*
+24         Based on
+24       ! https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/grstatug/p0cmojsdkiab8cn1k2qk3rp3
+24       ! a8s0.htm
+25         */
+26         
+27         %let report_name= 25-bmt-probplot;
+28         
+29         Title "xdata for probplot";
+30         data uxdata;
+31          length group $ 15;
+32          xb = 2;
+33          group = "AML-High Risk";
+34          output;
+35         
+36          group = "ALL";
+37          output;
+2 The SAS System
+
+38         
+39          group = "AML-Low Risk";
+40          output;
+41         run;
+
+NOTE: The data set WORK.UXDATA has 3 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+42         
+43         data uxdata1;
+44           set uxdata;
+45           if _n_=3; /* Select one row *?
+46         run;
+47         
+48         options nocenter;
+49         ods graphics / reset imagename="&report_name" outputfmt=png;
+50         ods _all_ close;
+51         
+52         ods html file  = "&report_name..html" (title = "25-BMT probplot")
+53                  path  = "&cdir_path\reports"
+54                  gpath = "&cdir_path\reports" (URL = none)
+55                  ;
+56         Title "uxdata";
+57         proc print data=uxdata1;
+58         run;
+59         
+60         Title "Weibull model with probplot";
+61         proc lifereg data=bmt xdata = uxdata1;
+62            class group;
+63            a: model t*status(0)= group xb / dist = weibull;
+64            probplot  / nodata
+65                plower=.5
+66                vref(intersect) = 75
+67                vreflab = '75 Percent';
+68            inset;
+69         run;
+70         
+71         ods html close;
+
+NOTE: There were 3 observations read from the data set WORK.UXDATA.
+NOTE: The data set WORK.UXDATA1 has 1 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.30 seconds
+      cpu time            0.34 seconds
+3 The SAS System
+
+      
