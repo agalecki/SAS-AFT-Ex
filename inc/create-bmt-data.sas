@@ -1,6 +1,6 @@
 
 /* Create Bone marrow transplant data */
-
+options nocenter nodate;
 data bmt;
   set sashelp.bmt;
   idx =_n_;

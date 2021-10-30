@@ -1,0 +1,175 @@
+1                                         The SAS System           16:46 Saturday, October 30, 2021
+
+NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
+      Licensed to UNIVERSITY OF MICHIGAN - T&R - SFA, Site 70082420.
+NOTE: This session is executing on the X64_10PRO  platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.2
+      SAS/ETS 14.2
+      SAS/OR 14.2
+      SAS/IML 14.2
+      SAS/QC 14.2
+
+NOTE: Additional host information:
+
+ X64_10PRO WIN 10.0.18362  Workstation
+
+NOTE: SAS initialization used:
+      real time           0.26 seconds
+      cpu time            0.34 seconds
+      
+1          %let cdir_path=.;   /* Path to current directory */
+2          
+3          filename bmtdata "&cdir_path\inc\create-bmt-data.sas";
+4          %include bmtdata;
+
+NOTE: There were 137 observations read from the data set SASHELP.BMT.
+NOTE: The data set WORK.BMT has 137 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+
+22         
+23         proc sort data =bmt;
+24         by group xb;
+25         run;
+
+NOTE: There were 137 observations read from the data set WORK.BMT.
+NOTE: The data set WORK.BMT has 137 observations and 6 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+26         
+27         data bmt;
+28           set bmt;
+29           by group;
+30           /* variable `control` allows to subset rows in `output` dataset created by `proc
+30       ! lifereg` */
+2 The SAS System
+
+31           control =0;
+32           if first.group then control =1;
+33           if last.group then control =1;
+34         run;
+
+NOTE: There were 137 observations read from the data set WORK.BMT.
+NOTE: The data set WORK.BMT has 137 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+35         
+36         
+37         options nocenter;
+38         ods html file = "20-bmt-lifereg-predicted.html" (title ="BMT predicted")
+39                  path = "&cdir_path\reports";
+NOTE: Writing HTML Body file: 20-bmt-lifereg-predicted.html
+40         title "Variale `control` created";
+41         proc contents data=bmt;
+42         run;
+
+NOTE: PROCEDURE CONTENTS used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.03 seconds
+      
+NOTE: The PROCEDURE CONTENTS printed page 1.
+
+43         
+44         Title "a: Weibull model. Predicted values.";
+45         proc lifereg data=bmt;
+46            class group;
+47            a: model t*status(0)= group xb /dist = weibull;
+48               output out=outa quantiles=.1 .5 .9
+49               std=std p=predtime control=control
+50               ;
+51         run;
+
+NOTE: Algorithm converged.
+NOTE: The data set WORK.OUTA has 18 observations and 10 variables.
+NOTE: The PROCEDURE LIFEREG printed pages 2-3.
+NOTE: PROCEDURE LIFEREG used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+      
+
+52         
+53         Title "b: Log-normal model. Predicted values";
+54         proc lifereg data=bmt;
+55           class group;
+56            b: model t*status(0)= group xb / dist=lnormal;
+57               output out=outb quantiles=.1 .5 .9
+58               std=std p=predtime control=control
+3 The SAS System
+
+59               ;
+60         run;
+
+NOTE: Algorithm converged.
+NOTE: The data set WORK.OUTB has 18 observations and 10 variables.
+NOTE: The PROCEDURE LIFEREG printed pages 4-5.
+NOTE: PROCEDURE LIFEREG used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+61         
+62         data out;
+63            set outa outb;
+64         run;
+
+NOTE: There were 18 observations read from the data set WORK.OUTA.
+NOTE: There were 18 observations read from the data set WORK.OUTB.
+NOTE: The data set WORK.OUT has 36 observations and 10 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+65         
+66         data out1;
+67            set out;
+68            ltime=log(predtime);
+69            stde=std/predtime;
+70            upper=exp(ltime+1.64*stde); /* 90 pct confidence interval */
+71            lower=exp(ltime-1.64*stde);
+72         run;
+
+NOTE: There were 36 observations read from the data set WORK.OUT.
+NOTE: The data set WORK.OUT1 has 36 observations and 14 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+73         
+74         title 'Quantile Estimates and Confidence Limits';
+75         proc print data=out1(drop=t);
+76            id idx;
+77         run;
+
+NOTE: There were 36 observations read from the data set WORK.OUT1.
+NOTE: The PROCEDURE PRINT printed page 6.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+4 The SAS System
+
+78         title;
+79         
+80         ods html close;
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.82 seconds
+      cpu time            0.82 seconds
+      
