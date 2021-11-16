@@ -1,4 +1,4 @@
-a: Estimates for Weibull model                                 10:18 Saturday, October 30, 2021   1
+a: Estimates for Weibull model                                                                    1
 
 The LIFEREG Procedure
 
@@ -50,7 +50,7 @@ Weibull BIC (smaller is better)      1325.632
 Algorithm converged.                                                       
 
 
-a: Estimates for Weibull model                                 10:18 Saturday, October 30, 2021   2
+a: Estimates for Weibull model                                                                    2
 
 The LIFEREG Procedure
 
@@ -75,7 +75,7 @@ Group         AML-Low Risk   0   0.0000    .        .        .         .        
 xb                           1   0.8589   1.9290  -2.9219   4.6398    0.20     0.6561
 Scale                        1   1.6295   0.1521   1.3570   1.9567                   
 Weibull Shape                1   0.6137   0.0573   0.5111   0.7369                   
-b: Estimates for log-normal                                    10:18 Saturday, October 30, 2021   3
+b: Estimates for log-normal                                                                       3
 
 The LIFEREG Procedure
 
@@ -127,7 +127,7 @@ Lognormal BIC (smaller is better)      1311.196
 Algorithm converged.                                                       
 
 
-b: Estimates for log-normal                                    10:18 Saturday, October 30, 2021   4
+b: Estimates for log-normal                                                                       4
 
 The LIFEREG Procedure
 
@@ -151,7 +151,7 @@ Group         AML-High Risk  1  -5.7173   4.0996 -13.7523   2.3178    1.94     0
 Group         AML-Low Risk   0   0.0000    .        .        .         .        .    
 xb                           1   2.0092   2.0170  -1.9441   5.9626    0.99     0.3192
 Scale                        1   2.0343   0.1726   1.7227   2.4024                   
-Estimates for Fitted Models                                    10:18 Saturday, October 30, 2021   5
+Estimates for Fitted Models                                                                       5
 
  
  

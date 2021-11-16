@@ -1,4 +1,4 @@
-1                                         The SAS System           10:18 Saturday, October 30, 2021
+1                                         The SAS System           14:45 Tuesday, November 16, 2021
 
 NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
@@ -21,7 +21,7 @@ NOTE: Additional host information:
 
 NOTE: SAS initialization used:
       real time           0.26 seconds
-      cpu time            0.29 seconds
+      cpu time            0.26 seconds
       
 1          %let cdir_path=.;   /* Path to current directory */
 2          
@@ -31,83 +31,77 @@ NOTE: SAS initialization used:
 NOTE: There were 137 observations read from the data set SASHELP.BMT.
 NOTE: The data set WORK.BMT has 137 observations and 6 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
+      real time           0.03 seconds
+      cpu time            0.01 seconds
       
 
 22         
 23         options nocenter;
-24         ods html file = "15-bmt-lifered-estimates.html" (title ="BMT estimates")
+24         ods html file = "15-bmt-lifereg-estimates.html" (title ="BMT estimates")
 25                  path = "&cdir_path\reports";
-NOTE: Writing HTML Body file: 15-bmt-lifered-estimates.html
+NOTE: Writing HTML Body file: 15-bmt-lifereg-estimates.html
 26         
 27         Title "a: Estimates for Weibull model";
 28         proc lifereg data=bmt outest=modela covout;
 29            class group;
 30            a: model t*status(0)= group xb /dist = weibull;
-31               output out=outa quantiles=.1 .5 .9;
-32         run;
+31         run;
 
 NOTE: Algorithm converged.
 NOTE: The data set WORK.MODELA has 7 observations and 13 variables.
-NOTE: The data set WORK.OUTA has 411 observations and 7 variables.
 NOTE: The PROCEDURE LIFEREG printed pages 1-2.
 NOTE: PROCEDURE LIFEREG used (Total process time):
-2 The SAS System                                                   10:18 Saturday, October 30, 2021
+      real time           0.06 seconds
+      cpu time            0.06 seconds
+2 The SAS System
 
-      real time           0.05 seconds
-      cpu time            0.04 seconds
       
 
-33         
-34         Title "b: Estimates for log-normal";
-35         proc lifereg data=bmt outest=modelb covout;
-36           class group;
-37            b: model t*status(0)= group xb / dist=lnormal;
-38               output out=outb quantiles=.1 .5 .9 ;
-39         run;
+32         
+33         Title "b: Estimates for log-normal";
+34         proc lifereg data=bmt outest=modelb covout;
+35           class group;
+36            b: model t*status(0)= group xb / dist=lnormal;
+37         run;
 
 NOTE: Algorithm converged.
 NOTE: The data set WORK.MODELB has 7 observations and 13 variables.
-NOTE: The data set WORK.OUTB has 411 observations and 7 variables.
 NOTE: The PROCEDURE LIFEREG printed pages 3-4.
 NOTE: PROCEDURE LIFEREG used (Total process time):
       real time           0.02 seconds
       cpu time            0.01 seconds
       
 
-40         
-41         data models;
-42            set modela modelb;
-43         run;
+38         
+39         data models;
+40            set modela modelb;
+41         run;
 
 NOTE: There were 7 observations read from the data set WORK.MODELA.
 NOTE: There were 7 observations read from the data set WORK.MODELB.
 NOTE: The data set WORK.MODELS has 14 observations and 13 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-44         
-45         proc print data=models;
-46            id _model_;
-47            title 'Estimates for Fitted Models';
-48         run;
+42         
+43         proc print data=models;
+44            id _model_;
+45            title 'Estimates for Fitted Models';
+46         run;
 
 NOTE: There were 14 observations read from the data set WORK.MODELS.
 NOTE: The PROCEDURE PRINT printed page 5.
 NOTE: PROCEDURE PRINT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.02 seconds
+      cpu time            0.00 seconds
       
 
-49         
-50         ods html close;
+47         
+48         ods html close;
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           0.78 seconds
-      cpu time            0.73 seconds
-3 The SAS System                                                   10:18 Saturday, October 30, 2021
-
+      real time           0.85 seconds
+      cpu time            0.63 seconds
       
