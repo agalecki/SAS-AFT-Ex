@@ -6,11 +6,11 @@
 * <img src="https://render.githubusercontent.com/render/math?math=\epsilon_i"> is random disturbance
 * Note: The scale parameter is the reciprocal of the shape parameter.
 
-eps distribution     | T distribution | Lifereg syntax         | Notes
---- | --- | ----
-extreme val(2 params)| Weibull        | dist = Weibull     | ?
-extreme val(1 param)| exponential     | dist = exponential | ?
-log-gamma           | gamma           | dist = gamma       | ?
+| eps distribution     | T distribution | Lifereg syntax         | Notes
+| --- | --- | ---- | ----
+| extreme value(2 params)| Weibull        | dist = Weibull     | ?
+| extreme val(1 param)| exponential     | dist = exponential | ?
+| log-gamma           | gamma           | dist = gamma       | ?
 
 
 Interpretation of the regression coefficients
