@@ -1,4 +1,31 @@
-# AFT model:
+# Intro to Accelerated Failure Time (AFT) Models
+
+## General notes on time-to-event data 
+* Time-to-event (T) requires time of origin (T0) to be defined. 
+* T takes on positive values
+* T is typically skewed to the right
+* T can be censored (left, right, interval)
+* T can be truncated (left, right)
+* Different type of events: 
+    - events of interest (ESKD), 
+    - interfering/intercurrent events (death, loss to follow-up)
+
+## Time-to-event data in **our study**. 
+
+* T0 is defined as time of the first visit for a given cohort (it does not have clinical interpretation)
+* Time-to-event is defined as time (T) to ESKD event
+* T can be right censored due to loss to follow-up, withdrawing from the study
+* Death: Consider to include as part of the composite event definition? Less recommended to treat time of death as censored value
+* Death can be treated as competing event
+
+## Notes on Cox regression 
+
+* Meets proportional hazard (PH) assumption:    <img src="https://render.githubusercontent.com/render/math?math=\log{(h(t|\beta,\vec{x})}=\log{h_0 (t)%2Bx^{\prime}\vec{\beta}">
+* Semi-parametric (because no distribution assumption on time to event) 
+* Interpretation: Effect of a covariate expressed in terms of hazard ratios (across entire time spectrum) 
+* Very popular in developing risk prediction models
+
+## AFT model:
 
 <img src="https://render.githubusercontent.com/render/math?math=log(T_i) = \beta_0 %2B\beta_1 x_{i1} %2B\ldots %2B\beta_p x_{ip} %2B\sigma\epsilon_i">
 
