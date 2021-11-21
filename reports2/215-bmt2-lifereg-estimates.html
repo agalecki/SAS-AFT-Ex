@@ -1,0 +1,4060 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-type" content="text/html; charset=windows-1252">
+<title>BMT2 estimates</title>
+<style type="text/css">
+<!--
+.aftercaption
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  padding-top: 4pt;
+}
+.batch
+{
+  background-color: #FAFBFE;
+  border: 1px solid #C1C1C1;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  padding: 7px;
+}
+.beforecaption
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.body
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.bodydate
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: right;
+  vertical-align: top;
+  width: 100%;
+}
+.bycontentfolder
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.byline
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.bylinecontainer
+{
+  background-color: #FAFBFE;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.caption
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.cell
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.container
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.contentfolder
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentitem
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.contentproclabel
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.contentprocname
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.contents
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.contentsdate
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.contenttitle
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.continued
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  width: 100%;
+}
+.data
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasis
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.dataemphasisfixed
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.dataempty
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datafixed
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.datastrong
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.datastrongfixed
+{
+  background-color: #FFFFFF;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.date
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.document
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+a:link {
+color:#0000FF
+}
+a:visited {
+color:#800080
+}
+a:active {
+color:#800080
+}
+.errorbanner
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.errorcontent
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.errorcontentfixed
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.extendedpage
+{
+  background-color: #FAFBFE;
+  border: 1pt solid #000000;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+}
+.fatalbanner
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.fatalcontent
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.fatalcontentfixed
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.folderaction
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.footer
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footeremphasis
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footeremphasisfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.footerempty
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.footerstrong
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.footerstrongfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.frame
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.graph
+{
+  background-color: #FAFBFE;
+  border: 1px solid #C1C1C1;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.header
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headeremphasis
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headeremphasisfixed
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.headerempty
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.headersandfooters
+{
+  background-color: #EDF2F9;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrong
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.headerstrongfixed
+{
+  background-color: #D8DBD3;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.heading1
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading2
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading3
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading4
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading5
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.heading6
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.index
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.indexaction
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexitem
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.indexprocname
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.indextitle
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.layoutcontainer
+{
+  border: 0px solid #000000;
+  border-spacing: 30px;
+}
+.layoutregion
+{
+  border: 0px solid #000000;
+  border-spacing: 30px;
+}
+.linecontent
+{
+  background-color: #FAFBFE;
+  border-bottom-width: 1px;
+  border-color: #C1C1C1;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.list
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: disc;
+}
+.list10
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list2
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: circle;
+}
+.list3
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list4
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list5
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list6
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list7
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list8
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.list9
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: disc;
+}
+.listitem10
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem2
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: circle;
+}
+.listitem3
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem4
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem5
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem6
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem7
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem8
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.listitem9
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: square;
+}
+.note
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notebanner
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.notecontent
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.notecontentfixed
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.output
+{
+  background-color: #FAFBFE;
+  border: 1px solid #C1C1C1;
+  border-collapse: separate;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.pageno
+{
+  background-color: #FAFBFE;
+  border-spacing: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+}
+.pages
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: decimal;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.pagesdate
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.pagesitem
+{
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  list-style-type: none;
+  margin-left: 6pt;
+}
+.pagesproclabel
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.pagesprocname
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.pagestitle
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: bold;
+}
+.paragraph
+{
+  background-color: #FAFBFE;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.parskip
+{
+  border: 0px solid #000000;
+  border-spacing: 0px;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.prepage
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+}
+.proctitle
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.proctitlefixed
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooter
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooteremphasis
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooteremphasisfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowfooterempty
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowfooterstrong
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowfooterstrongfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheader
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderemphasis
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderemphasisfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: italic;
+  font-weight: normal;
+}
+.rowheaderempty
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.rowheaderstrong
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.rowheaderstrongfixed
+{
+  background-color: #EDF2F9;
+  border-bottom-width: 1px;
+  border-color: #B0B7BB;
+  border-left-width: 0px;
+  border-right-width: 1px;
+  border-style: solid;
+  border-top-width: 0px;
+  color: #112277;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemfooter
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter10
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter2
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter3
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter4
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter5
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter6
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter7
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter8
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemfooter9
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.systemtitle
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle10
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle2
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle3
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle4
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle5
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle6
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle7
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle8
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systemtitle9
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: small;
+  font-style: normal;
+  font-weight: bold;
+}
+.systitleandfootercontainer
+{
+  background-color: #FAFBFE;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.table
+{
+  border-bottom-width: 0px;
+  border-collapse: collapse;
+  border-color: #C1C1C1;
+  border-left-width: 1px;
+  border-right-width: 0px;
+  border-spacing: 0px;
+  border-style: solid;
+  border-top-width: 1px;
+}
+.top_stacked_value
+{
+  padding-bottom: 1px;
+  border: 0;
+}
+.middle_stacked_value
+{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 0;
+}
+.bottom_stacked_value
+{
+  padding-top: 1px;
+  border: 0;
+}
+.titleandnotecontainer
+{
+  background-color: #FAFBFE;
+  border: 0px solid #000000;
+  border-spacing: 1px;
+  color: #000000;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+  width: 100%;
+}
+.titlesandfooters
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.usertext
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warnbanner
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: bold;
+}
+.warncontent
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: Arial, 'Albany AMT', Helvetica, Helv;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.warncontentfixed
+{
+  background-color: #FAFBFE;
+  color: #112277;
+  font-family: 'Courier New', Courier;
+  font-size: x-small;
+  font-style: normal;
+  font-weight: normal;
+}
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l systemtitle">a: Estimates for Weibull model</td>
+</tr>
+</table><br>
+<div class="l proctitle">The LIFEREG Procedure</div>
+<p>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Information">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.BMT2</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Dependent Variable</th>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Variable</th>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Value(s)</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations</th>
+<td class="r data">43</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Noncensored Values</th>
+<td class="r data">26</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Right Censored Values</th>
+<td class="r data">17</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Left Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Interval Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Parameters</th>
+<td class="r data">6</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Name of Distribution</th>
+<td class="r data">Weibull</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Log Likelihood</th>
+<td class="r data" nowrap>-61.87478404</td>
+<td class="l data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX1"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Observations Summary">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">43</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">43</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX2"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">123.750</td>
+</tr>
+<tr>
+<td class="l data">AIC (smaller is better)</td>
+<td class="r data">135.750</td>
+</tr>
+<tr>
+<td class="l data">AICC (smaller is better)</td>
+<td class="r data">138.083</td>
+</tr>
+<tr>
+<td class="l data">BIC (smaller is better)</td>
+<td class="r data">146.317</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX3"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics (Unlogged Response)">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics (Unlogged Response)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">336.951</td>
+</tr>
+<tr>
+<td class="l data">Weibull AIC (smaller is better)</td>
+<td class="r data">348.951</td>
+</tr>
+<tr>
+<td class="l data">Weibull AICC (smaller is better)</td>
+<td class="r data">351.285</td>
+</tr>
+<tr>
+<td class="l data">Weibull BIC (smaller is better)</td>
+<td class="r data">359.519</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX4"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Convergence Status">
+<colgroup>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="l data">Algorithm converged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX5"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Type 3 Analysis">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Type III Analysis of Effects</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Effect</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Wald<br/>Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.3016</td>
+<td class="r data">0.5829</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data">3.5452</td>
+<td class="r data">0.0597</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">40.8204</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.1314</td>
+<td class="r data">0.2875</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX6"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Analysis of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Analysis of Maximum Likelihood Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95% Confidence Limits</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">0.3615</td>
+<td class="r data">0.8859</td>
+<td class="r data" nowrap>-1.3748</td>
+<td class="r data">2.0978</td>
+<td class="r data">0.17</td>
+<td class="r data">0.6832</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.3212</td>
+<td class="r data">0.5849</td>
+<td class="r data" nowrap>-0.8252</td>
+<td class="r data">1.4677</td>
+<td class="r data">0.30</td>
+<td class="r data">0.5829</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data" nowrap>-1.2400</td>
+<td class="r data">0.6586</td>
+<td class="r data" nowrap>-2.5307</td>
+<td class="r data">0.0508</td>
+<td class="r data">3.55</td>
+<td class="r data">0.0597</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">0.0784</td>
+<td class="r data">0.0123</td>
+<td class="r data">0.0543</td>
+<td class="r data">0.1024</td>
+<td class="r data">40.82</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">0.0101</td>
+<td class="r data">0.0095</td>
+<td class="r data" nowrap>-0.0085</td>
+<td class="r data">0.0287</td>
+<td class="r data">1.13</td>
+<td class="r data">0.2875</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Scale</th>
+<td class="r data">1</td>
+<td class="r data">1.3019</td>
+<td class="r data">0.2083</td>
+<td class="r data">0.9515</td>
+<td class="r data">1.7813</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Weibull Shape</th>
+<td class="r data">1</td>
+<td class="r data">0.7681</td>
+<td class="r data">0.1229</td>
+<td class="r data">0.5614</td>
+<td class="r data">1.0510</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX7"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l systemtitle">b: Estimates for exponential model</td>
+</tr>
+</table><br>
+<div class="l proctitle">The LIFEREG Procedure</div>
+<p>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Information">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.BMT2</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Dependent Variable</th>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Variable</th>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Value(s)</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations</th>
+<td class="r data">43</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Noncensored Values</th>
+<td class="r data">26</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Right Censored Values</th>
+<td class="r data">17</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Left Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Interval Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Parameters</th>
+<td class="r data">5</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Name of Distribution</th>
+<td class="r data">Exponential</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Log Likelihood</th>
+<td class="r data" nowrap>-63.4316167</td>
+<td class="l data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX8"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Observations Summary">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">43</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">43</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX9"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">126.863</td>
+</tr>
+<tr>
+<td class="l data">AIC (smaller is better)</td>
+<td class="r data">136.863</td>
+</tr>
+<tr>
+<td class="l data">AICC (smaller is better)</td>
+<td class="r data">138.485</td>
+</tr>
+<tr>
+<td class="l data">BIC (smaller is better)</td>
+<td class="r data">145.669</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX10"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics (Unlogged Response)">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics (Unlogged Response)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">340.065</td>
+</tr>
+<tr>
+<td class="l data">Exponential AIC (smaller is better)</td>
+<td class="r data">350.065</td>
+</tr>
+<tr>
+<td class="l data">Exponential AICC (smaller is better)</td>
+<td class="r data">351.687</td>
+</tr>
+<tr>
+<td class="l data">Exponential BIC (smaller is better)</td>
+<td class="r data">358.871</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX11"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Convergence Status">
+<colgroup>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="l data">Algorithm converged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX12"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Type 3 Analysis">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Type III Analysis of Effects</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Effect</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Wald<br/>Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.2471</td>
+<td class="r data">0.6191</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data">5.0232</td>
+<td class="r data">0.0250</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">63.0227</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.5896</td>
+<td class="r data">0.2074</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX13"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Analysis of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Analysis of Maximum Likelihood Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95% Confidence Limits</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">0.6726</td>
+<td class="r data">0.6510</td>
+<td class="r data" nowrap>-0.6033</td>
+<td class="r data">1.9485</td>
+<td class="r data">1.07</td>
+<td class="r data">0.3015</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.2332</td>
+<td class="r data">0.4692</td>
+<td class="r data" nowrap>-0.6864</td>
+<td class="r data">1.1529</td>
+<td class="r data">0.25</td>
+<td class="r data">0.6191</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data" nowrap>-1.1883</td>
+<td class="r data">0.5302</td>
+<td class="r data" nowrap>-2.2275</td>
+<td class="r data" nowrap>-0.1491</td>
+<td class="r data">5.02</td>
+<td class="r data">0.0250</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">0.0743</td>
+<td class="r data">0.0094</td>
+<td class="r data">0.0559</td>
+<td class="r data">0.0926</td>
+<td class="r data">63.02</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">0.0090</td>
+<td class="r data">0.0071</td>
+<td class="r data" nowrap>-0.0050</td>
+<td class="r data">0.0229</td>
+<td class="r data">1.59</td>
+<td class="r data">0.2074</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Scale</th>
+<td class="r data">0</td>
+<td class="r data">1.0000</td>
+<td class="r data">0.0000</td>
+<td class="r data">1.0000</td>
+<td class="r data">1.0000</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Weibull Shape</th>
+<td class="r data">0</td>
+<td class="r data">1.0000</td>
+<td class="r data">0.0000</td>
+<td class="r data">1.0000</td>
+<td class="r data">1.0000</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX14"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Lagrange Multiplier Statistics">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Lagrange Multiplier Statistics</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Scale</th>
+<td class="r data">2.2690</td>
+<td class="r data">0.1320</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX15"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l systemtitle">c: Estimates for gamma model</td>
+</tr>
+</table><br>
+<div class="l proctitle">The LIFEREG Procedure</div>
+<p>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Information">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.BMT2</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Dependent Variable</th>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Variable</th>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Value(s)</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations</th>
+<td class="r data">43</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Noncensored Values</th>
+<td class="r data">26</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Right Censored Values</th>
+<td class="r data">17</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Left Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Interval Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Parameters</th>
+<td class="r data">7</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Name of Distribution</th>
+<td class="r data">Gamma</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Log Likelihood</th>
+<td class="r data" nowrap>-61.08586921</td>
+<td class="l data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX16"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Observations Summary">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">43</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">43</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX17"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">122.172</td>
+</tr>
+<tr>
+<td class="l data">AIC (smaller is better)</td>
+<td class="r data">136.172</td>
+</tr>
+<tr>
+<td class="l data">AICC (smaller is better)</td>
+<td class="r data">139.372</td>
+</tr>
+<tr>
+<td class="l data">BIC (smaller is better)</td>
+<td class="r data">148.500</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX18"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics (Unlogged Response)">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics (Unlogged Response)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">335.374</td>
+</tr>
+<tr>
+<td class="l data">Gamma AIC (smaller is better)</td>
+<td class="r data">349.374</td>
+</tr>
+<tr>
+<td class="l data">Gamma AICC (smaller is better)</td>
+<td class="r data">352.574</td>
+</tr>
+<tr>
+<td class="l data">Gamma BIC (smaller is better)</td>
+<td class="r data">361.702</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX19"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Convergence Status">
+<colgroup>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="l data">Algorithm converged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX20"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Type 3 Analysis">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Type III Analysis of Effects</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Effect</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Wald<br/>Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.3414</td>
+<td class="r data">0.5590</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data">2.9784</td>
+<td class="r data">0.0844</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">6.4232</td>
+<td class="r data">0.0113</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.1855</td>
+<td class="r data">0.2762</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX21"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Analysis of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Analysis of Maximum Likelihood Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95% Confidence Limits</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">0.3809</td>
+<td class="r data">1.4322</td>
+<td class="r data" nowrap>-2.4261</td>
+<td class="r data">3.1879</td>
+<td class="r data">0.07</td>
+<td class="r data">0.7903</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.4107</td>
+<td class="r data">0.7029</td>
+<td class="r data" nowrap>-0.9670</td>
+<td class="r data">1.7884</td>
+<td class="r data">0.34</td>
+<td class="r data">0.5590</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data" nowrap>-1.2102</td>
+<td class="r data">0.7013</td>
+<td class="r data" nowrap>-2.5847</td>
+<td class="r data">0.1642</td>
+<td class="r data">2.98</td>
+<td class="r data">0.0844</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">0.0651</td>
+<td class="r data">0.0257</td>
+<td class="r data">0.0148</td>
+<td class="r data">0.1154</td>
+<td class="r data">6.42</td>
+<td class="r data">0.0113</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">0.0143</td>
+<td class="r data">0.0131</td>
+<td class="r data" nowrap>-0.0114</td>
+<td class="r data">0.0400</td>
+<td class="r data">1.19</td>
+<td class="r data">0.2762</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Scale</th>
+<td class="r data">1</td>
+<td class="r data">1.6617</td>
+<td class="r data">0.3086</td>
+<td class="r data">1.1547</td>
+<td class="r data">2.3913</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Shape</th>
+<td class="r data">1</td>
+<td class="r data" nowrap>-0.1584</td>
+<td class="r data">1.2259</td>
+<td class="r data" nowrap>-2.5611</td>
+<td class="r data">2.2443</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX22"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l systemtitle">d: Estimates for log-logistic model</td>
+</tr>
+</table><br>
+<div class="l proctitle">The LIFEREG Procedure</div>
+<p>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Information">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.BMT2</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Dependent Variable</th>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Variable</th>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Value(s)</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations</th>
+<td class="r data">43</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Noncensored Values</th>
+<td class="r data">26</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Right Censored Values</th>
+<td class="r data">17</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Left Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Interval Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Parameters</th>
+<td class="r data">6</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Name of Distribution</th>
+<td class="r data">LLogistic</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Log Likelihood</th>
+<td class="r data" nowrap>-61.42753603</td>
+<td class="l data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX23"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Observations Summary">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">43</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">43</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX24"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">122.855</td>
+</tr>
+<tr>
+<td class="l data">AIC (smaller is better)</td>
+<td class="r data">134.855</td>
+</tr>
+<tr>
+<td class="l data">AICC (smaller is better)</td>
+<td class="r data">137.188</td>
+</tr>
+<tr>
+<td class="l data">BIC (smaller is better)</td>
+<td class="r data">145.422</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX25"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics (Unlogged Response)">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics (Unlogged Response)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">336.057</td>
+</tr>
+<tr>
+<td class="l data">LLogistic AIC (smaller is better)</td>
+<td class="r data">348.057</td>
+</tr>
+<tr>
+<td class="l data">LLogistic AICC (smaller is better)</td>
+<td class="r data">350.390</td>
+</tr>
+<tr>
+<td class="l data">LLogistic BIC (smaller is better)</td>
+<td class="r data">358.624</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX26"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Convergence Status">
+<colgroup>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="l data">Algorithm converged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX27"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Type 3 Analysis">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Type III Analysis of Effects</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Effect</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Wald<br/>Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.6203</td>
+<td class="r data">0.4309</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data">3.7532</td>
+<td class="r data">0.0527</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">22.8195</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.3125</td>
+<td class="r data">0.2520</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX28"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Analysis of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Analysis of Maximum Likelihood Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95% Confidence Limits</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">0.3431</td>
+<td class="r data">1.1571</td>
+<td class="r data" nowrap>-1.9249</td>
+<td class="r data">2.6110</td>
+<td class="r data">0.09</td>
+<td class="r data">0.7669</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.4712</td>
+<td class="r data">0.5983</td>
+<td class="r data" nowrap>-0.7014</td>
+<td class="r data">1.6439</td>
+<td class="r data">0.62</td>
+<td class="r data">0.4309</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data" nowrap>-1.3024</td>
+<td class="r data">0.6723</td>
+<td class="r data" nowrap>-2.6201</td>
+<td class="r data">0.0152</td>
+<td class="r data">3.75</td>
+<td class="r data">0.0527</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">0.0681</td>
+<td class="r data">0.0143</td>
+<td class="r data">0.0402</td>
+<td class="r data">0.0961</td>
+<td class="r data">22.82</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">0.0124</td>
+<td class="r data">0.0108</td>
+<td class="r data" nowrap>-0.0088</td>
+<td class="r data">0.0336</td>
+<td class="r data">1.31</td>
+<td class="r data">0.2520</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Scale</th>
+<td class="r data">1</td>
+<td class="r data">0.9472</td>
+<td class="r data">0.1577</td>
+<td class="r data">0.6834</td>
+<td class="r data">1.3127</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX29"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l systemtitle">e: Estimates for log-normal</td>
+</tr>
+</table><br>
+<div class="l proctitle">The LIFEREG Procedure</div>
+<p>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Information">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="3" scope="colgroup">Model Information</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Data Set</th>
+<td class="r data">WORK.BMT2</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Dependent Variable</th>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Variable</th>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Censoring Value(s)</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations</th>
+<td class="r data">43</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Noncensored Values</th>
+<td class="r data">26</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Right Censored Values</th>
+<td class="r data">17</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Left Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Interval Censored Values</th>
+<td class="r data">0</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Parameters</th>
+<td class="r data">6</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Name of Distribution</th>
+<td class="r data">Lognormal</td>
+<td class="l data">&nbsp;</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Log Likelihood</th>
+<td class="r data" nowrap>-61.09577117</td>
+<td class="l data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX30"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Observations Summary">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Read</th>
+<td class="r data">43</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Number of Observations Used</th>
+<td class="r data">43</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX31"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">122.192</td>
+</tr>
+<tr>
+<td class="l data">AIC (smaller is better)</td>
+<td class="r data">134.192</td>
+</tr>
+<tr>
+<td class="l data">AICC (smaller is better)</td>
+<td class="r data">136.525</td>
+</tr>
+<tr>
+<td class="l data">BIC (smaller is better)</td>
+<td class="r data">144.759</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX32"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Model Fit Statistics (Unlogged Response)">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="2" scope="colgroup">Fit Statistics (Unlogged Response)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l data">-2 Log Likelihood</td>
+<td class="r data">335.393</td>
+</tr>
+<tr>
+<td class="l data">Lognormal AIC (smaller is better)</td>
+<td class="r data">347.393</td>
+</tr>
+<tr>
+<td class="l data">Lognormal AICC (smaller is better)</td>
+<td class="r data">349.727</td>
+</tr>
+<tr>
+<td class="l data">Lognormal BIC (smaller is better)</td>
+<td class="r data">357.961</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX33"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Convergence Status">
+<colgroup>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="l data">Algorithm converged.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX34"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Type 3 Analysis">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="4" scope="colgroup">Type III Analysis of Effects</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Effect</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Wald<br/>Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.5622</td>
+<td class="r data">0.4534</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data">3.0519</td>
+<td class="r data">0.0806</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">21.1254</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.4085</td>
+<td class="r data">0.2353</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<a name="IDX35"></a>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Lifereg: Analysis of Parameter Estimates">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c b header" colspan="8" scope="colgroup">Analysis of Maximum Likelihood Parameter Estimates</th>
+</tr>
+<tr>
+<th class="l b header" scope="col">Parameter</th>
+<th class="r b header" scope="col">DF</th>
+<th class="r b header" scope="col">Estimate</th>
+<th class="r b header" scope="col">Standard<br/>Error</th>
+<th class="c b header" colspan="2" scope="colgroup">95% Confidence Limits</th>
+<th class="r b header" scope="col">Chi-Square</th>
+<th class="r b header" scope="col">Pr&nbsp;&gt;&nbsp;ChiSq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">Intercept</th>
+<td class="r data">1</td>
+<td class="r data">0.3059</td>
+<td class="r data">1.2183</td>
+<td class="r data" nowrap>-2.0820</td>
+<td class="r data">2.6938</td>
+<td class="r data">0.06</td>
+<td class="r data">0.8018</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.4497</td>
+<td class="r data">0.5998</td>
+<td class="r data" nowrap>-0.7258</td>
+<td class="r data">1.6252</td>
+<td class="r data">0.56</td>
+<td class="r data">0.4534</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">1</td>
+<td class="r data" nowrap>-1.1992</td>
+<td class="r data">0.6865</td>
+<td class="r data" nowrap>-2.5446</td>
+<td class="r data">0.1462</td>
+<td class="r data">3.05</td>
+<td class="r data">0.0806</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">0.0676</td>
+<td class="r data">0.0147</td>
+<td class="r data">0.0388</td>
+<td class="r data">0.0965</td>
+<td class="r data">21.13</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">0.0135</td>
+<td class="r data">0.0114</td>
+<td class="r data" nowrap>-0.0088</td>
+<td class="r data">0.0359</td>
+<td class="r data">1.41</td>
+<td class="r data">0.2353</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">Scale</th>
+<td class="r data">1</td>
+<td class="r data">1.6336</td>
+<td class="r data">0.2448</td>
+<td class="r data">1.2177</td>
+<td class="r data">2.1913</td>
+<td class="r data">&nbsp;</td>
+<td class="r data">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<p style="page-break-after: always;"><br/></p><hr size="3"/>
+<a name="IDX36"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
+<tr>
+<td class="l systemtitle">Estimates for Fitted Models</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="5" rules="all" frame="box" bordercolor="#C1C1C1" summary="Procedure Print: Data Set WORK.MODELS">
+<colgroup>
+<col>
+</colgroup>
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l header" scope="col">_MODEL_</th>
+<th class="l header" scope="col">_NAME_</th>
+<th class="l header" scope="col">_TYPE_</th>
+<th class="l header" scope="col">_DIST_</th>
+<th class="l header" scope="col">_STATUS_</th>
+<th class="r header" scope="col">_LNLIKE_</th>
+<th class="r header" scope="col">time</th>
+<th class="r header" scope="col">Intercept</th>
+<th class="r header" scope="col">allo</th>
+<th class="r header" scope="col">hodgkins</th>
+<th class="r header" scope="col">kscore</th>
+<th class="r header" scope="col">wtime</th>
+<th class="r header" scope="col">_SCALE_</th>
+<th class="r header" scope="col">_SHAPE1_</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">time</td>
+<td class="l data">PARMS</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data" nowrap>-1.00000</td>
+<td class="r data">0.36150</td>
+<td class="r data">0.32123</td>
+<td class="r data" nowrap>-1.23998</td>
+<td class="r data">0.078376</td>
+<td class="r data">0.010085</td>
+<td class="r data">1.30190</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">Intercept</td>
+<td class="l data">COV</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data">0.36150</td>
+<td class="r data">0.78476</td>
+<td class="r data" nowrap>-0.20337</td>
+<td class="r data" nowrap>-0.11361</td>
+<td class="r data" nowrap>-0.008918</td>
+<td class="r data">0.000288</td>
+<td class="r data" nowrap>-0.04486</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">allo</td>
+<td class="l data">COV</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data">0.32123</td>
+<td class="r data" nowrap>-0.20337</td>
+<td class="r data">0.34216</td>
+<td class="r data">0.14745</td>
+<td class="r data">0.000140</td>
+<td class="r data" nowrap>-0.000132</td>
+<td class="r data">0.01181</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">hodgkins</td>
+<td class="l data">COV</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data" nowrap>-1.23998</td>
+<td class="r data" nowrap>-0.11361</td>
+<td class="r data">0.14745</td>
+<td class="r data">0.43370</td>
+<td class="r data" nowrap>-0.000716</td>
+<td class="r data" nowrap>-0.002881</td>
+<td class="r data" nowrap>-0.00705</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">kscore</td>
+<td class="l data">COV</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data">0.07838</td>
+<td class="r data" nowrap>-0.00892</td>
+<td class="r data">0.00014</td>
+<td class="r data" nowrap>-0.00072</td>
+<td class="r data">0.000150</td>
+<td class="r data" nowrap>-0.000028</td>
+<td class="r data">0.00064</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">wtime</td>
+<td class="l data">COV</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data">0.01008</td>
+<td class="r data">0.00029</td>
+<td class="r data" nowrap>-0.00013</td>
+<td class="r data" nowrap>-0.00288</td>
+<td class="r data" nowrap>-0.000028</td>
+<td class="r data">0.000090</td>
+<td class="r data">0.00016</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">a</th>
+<td class="l data">Scale</td>
+<td class="l data">COV</td>
+<td class="l data">Weibull</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.8748</td>
+<td class="r data">1.30190</td>
+<td class="r data" nowrap>-0.04486</td>
+<td class="r data">0.01181</td>
+<td class="r data" nowrap>-0.00705</td>
+<td class="r data">0.000640</td>
+<td class="r data">0.000160</td>
+<td class="r data">0.04337</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">time</td>
+<td class="l data">PARMS</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data" nowrap>-1.00000</td>
+<td class="r data">0.67258</td>
+<td class="r data">0.23325</td>
+<td class="r data" nowrap>-1.18831</td>
+<td class="r data">0.074274</td>
+<td class="r data">0.008980</td>
+<td class="r data">1.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">Intercept</td>
+<td class="l data">COV</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data">0.67258</td>
+<td class="r data">0.42377</td>
+<td class="r data" nowrap>-0.10013</td>
+<td class="r data" nowrap>-0.06429</td>
+<td class="r data" nowrap>-0.004790</td>
+<td class="r data">0.000215</td>
+<td class="r data">0.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">allo</td>
+<td class="l data">COV</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data">0.23325</td>
+<td class="r data" nowrap>-0.10013</td>
+<td class="r data">0.22016</td>
+<td class="r data">0.11688</td>
+<td class="r data" nowrap>-0.000532</td>
+<td class="r data" nowrap>-0.000075</td>
+<td class="r data">0.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">hodgkins</td>
+<td class="l data">COV</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data" nowrap>-1.18831</td>
+<td class="r data" nowrap>-0.06429</td>
+<td class="r data">0.11688</td>
+<td class="r data">0.28111</td>
+<td class="r data" nowrap>-0.000830</td>
+<td class="r data" nowrap>-0.001633</td>
+<td class="r data">0.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">kscore</td>
+<td class="l data">COV</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data">0.07427</td>
+<td class="r data" nowrap>-0.00479</td>
+<td class="r data" nowrap>-0.00053</td>
+<td class="r data" nowrap>-0.00083</td>
+<td class="r data">0.000088</td>
+<td class="r data" nowrap>-0.000016</td>
+<td class="r data">0.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">wtime</td>
+<td class="l data">COV</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data">0.00898</td>
+<td class="r data">0.00022</td>
+<td class="r data" nowrap>-0.00008</td>
+<td class="r data" nowrap>-0.00163</td>
+<td class="r data" nowrap>-0.000016</td>
+<td class="r data">0.000051</td>
+<td class="r data">0.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">b</th>
+<td class="l data">Scale</td>
+<td class="l data">COV</td>
+<td class="l data">Exponential</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-63.4316</td>
+<td class="r data">1.00000</td>
+<td class="r data">0.00000</td>
+<td class="r data">0.00000</td>
+<td class="r data">0.00000</td>
+<td class="r data">0.000000</td>
+<td class="r data">0.000000</td>
+<td class="r data">0.00000</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">time</td>
+<td class="l data">PARMS</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data" nowrap>-1.00000</td>
+<td class="r data">0.38091</td>
+<td class="r data">0.41069</td>
+<td class="r data" nowrap>-1.21024</td>
+<td class="r data">0.065097</td>
+<td class="r data">0.014272</td>
+<td class="r data">1.66174</td>
+<td class="r data" nowrap>-0.15838</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">Intercept</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data">0.38091</td>
+<td class="r data">2.05115</td>
+<td class="r data" nowrap>-0.64361</td>
+<td class="r data" nowrap>-0.30449</td>
+<td class="r data" nowrap>-0.031589</td>
+<td class="r data">0.004839</td>
+<td class="r data">0.07367</td>
+<td class="r data" nowrap>-0.84047</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">allo</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data">0.41069</td>
+<td class="r data" nowrap>-0.64361</td>
+<td class="r data">0.49407</td>
+<td class="r data">0.10227</td>
+<td class="r data">0.010852</td>
+<td class="r data" nowrap>-0.002634</td>
+<td class="r data" nowrap>-0.05538</td>
+<td class="r data">0.44485</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">hodgkins</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data" nowrap>-1.21024</td>
+<td class="r data" nowrap>-0.30449</td>
+<td class="r data">0.10227</td>
+<td class="r data">0.49176</td>
+<td class="r data">0.004258</td>
+<td class="r data" nowrap>-0.005545</td>
+<td class="r data" nowrap>-0.01876</td>
+<td class="r data">0.11474</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">kscore</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data">0.06510</td>
+<td class="r data" nowrap>-0.03159</td>
+<td class="r data">0.01085</td>
+<td class="r data">0.00426</td>
+<td class="r data">0.000660</td>
+<td class="r data" nowrap>-0.000166</td>
+<td class="r data" nowrap>-0.00291</td>
+<td class="r data">0.02551</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">wtime</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data">0.01427</td>
+<td class="r data">0.00484</td>
+<td class="r data" nowrap>-0.00263</td>
+<td class="r data" nowrap>-0.00554</td>
+<td class="r data" nowrap>-0.000166</td>
+<td class="r data">0.000172</td>
+<td class="r data">0.00118</td>
+<td class="r data" nowrap>-0.00717</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">Scale</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data">1.66174</td>
+<td class="r data">0.07367</td>
+<td class="r data" nowrap>-0.05538</td>
+<td class="r data" nowrap>-0.01876</td>
+<td class="r data" nowrap>-0.002906</td>
+<td class="r data">0.001184</td>
+<td class="r data">0.09523</td>
+<td class="r data" nowrap>-0.22494</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">c</th>
+<td class="l data">Shape1</td>
+<td class="l data">COV</td>
+<td class="l data">Gamma</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0859</td>
+<td class="r data" nowrap>-0.15838</td>
+<td class="r data" nowrap>-0.84047</td>
+<td class="r data">0.44485</td>
+<td class="r data">0.11474</td>
+<td class="r data">0.025514</td>
+<td class="r data" nowrap>-0.007174</td>
+<td class="r data" nowrap>-0.22494</td>
+<td class="r data">1.50284</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">time</td>
+<td class="l data">PARMS</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data" nowrap>-1.00000</td>
+<td class="r data">0.34305</td>
+<td class="r data">0.47122</td>
+<td class="r data" nowrap>-1.30243</td>
+<td class="r data">0.068114</td>
+<td class="r data">0.012378</td>
+<td class="r data">0.94716</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">Intercept</td>
+<td class="l data">COV</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data">0.34305</td>
+<td class="r data">1.33899</td>
+<td class="r data" nowrap>-0.38506</td>
+<td class="r data" nowrap>-0.21008</td>
+<td class="r data" nowrap>-0.014844</td>
+<td class="r data">0.000999</td>
+<td class="r data" nowrap>-0.02591</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">allo</td>
+<td class="l data">COV</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data">0.47122</td>
+<td class="r data" nowrap>-0.38506</td>
+<td class="r data">0.35796</td>
+<td class="r data">0.07791</td>
+<td class="r data">0.003191</td>
+<td class="r data" nowrap>-0.000645</td>
+<td class="r data">0.00468</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">hodgkins</td>
+<td class="l data">COV</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data" nowrap>-1.30243</td>
+<td class="r data" nowrap>-0.21008</td>
+<td class="r data">0.07791</td>
+<td class="r data">0.45197</td>
+<td class="r data">0.001748</td>
+<td class="r data" nowrap>-0.004210</td>
+<td class="r data">0.00113</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">kscore</td>
+<td class="l data">COV</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data">0.06811</td>
+<td class="r data" nowrap>-0.01484</td>
+<td class="r data">0.00319</td>
+<td class="r data">0.00175</td>
+<td class="r data">0.000203</td>
+<td class="r data" nowrap>-0.000043</td>
+<td class="r data">0.00042</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">wtime</td>
+<td class="l data">COV</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data">0.01238</td>
+<td class="r data">0.00100</td>
+<td class="r data" nowrap>-0.00064</td>
+<td class="r data" nowrap>-0.00421</td>
+<td class="r data" nowrap>-0.000043</td>
+<td class="r data">0.000117</td>
+<td class="r data">0.00008</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">d</th>
+<td class="l data">Scale</td>
+<td class="l data">COV</td>
+<td class="l data">LLogistic</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.4275</td>
+<td class="r data">0.94716</td>
+<td class="r data" nowrap>-0.02591</td>
+<td class="r data">0.00468</td>
+<td class="r data">0.00113</td>
+<td class="r data">0.000422</td>
+<td class="r data">0.000077</td>
+<td class="r data">0.02487</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">time</td>
+<td class="l data">PARMS</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data" nowrap>-1.00000</td>
+<td class="r data">0.30587</td>
+<td class="r data">0.44971</td>
+<td class="r data" nowrap>-1.19920</td>
+<td class="r data">0.067635</td>
+<td class="r data">0.013538</td>
+<td class="r data">1.63355</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">Intercept</td>
+<td class="l data">COV</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data">0.30587</td>
+<td class="r data">1.48434</td>
+<td class="r data" nowrap>-0.37312</td>
+<td class="r data" nowrap>-0.22311</td>
+<td class="r data" nowrap>-0.016293</td>
+<td class="r data">0.000705</td>
+<td class="r data" nowrap>-0.05122</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">allo</td>
+<td class="l data">COV</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data">0.44971</td>
+<td class="r data" nowrap>-0.37312</td>
+<td class="r data">0.35971</td>
+<td class="r data">0.07515</td>
+<td class="r data">0.002970</td>
+<td class="r data" nowrap>-0.000464</td>
+<td class="r data">0.01007</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">hodgkins</td>
+<td class="l data">COV</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data" nowrap>-1.19920</td>
+<td class="r data" nowrap>-0.22311</td>
+<td class="r data">0.07515</td>
+<td class="r data">0.47121</td>
+<td class="r data">0.001942</td>
+<td class="r data" nowrap>-0.004652</td>
+<td class="r data" nowrap>-0.00269</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">kscore</td>
+<td class="l data">COV</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data">0.06763</td>
+<td class="r data" nowrap>-0.01629</td>
+<td class="r data">0.00297</td>
+<td class="r data">0.00194</td>
+<td class="r data">0.000217</td>
+<td class="r data" nowrap>-0.000041</td>
+<td class="r data">0.00088</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">wtime</td>
+<td class="l data">COV</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data">0.01354</td>
+<td class="r data">0.00071</td>
+<td class="r data" nowrap>-0.00046</td>
+<td class="r data" nowrap>-0.00465</td>
+<td class="r data" nowrap>-0.000041</td>
+<td class="r data">0.000130</td>
+<td class="r data">0.00013</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">e</th>
+<td class="l data">Scale</td>
+<td class="l data">COV</td>
+<td class="l data">Lognormal</td>
+<td class="l data">0 Converged</td>
+<td class="r data" nowrap>-61.0958</td>
+<td class="r data">1.63355</td>
+<td class="r data" nowrap>-0.05122</td>
+<td class="r data">0.01007</td>
+<td class="r data" nowrap>-0.00269</td>
+<td class="r data">0.000880</td>
+<td class="r data">0.000133</td>
+<td class="r data">0.05994</td>
+<td class="r data">.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

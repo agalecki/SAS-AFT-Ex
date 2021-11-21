@@ -1,0 +1,115 @@
+1                                         The SAS System            15:34 Sunday, November 21, 2021
+
+NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
+      Licensed to UNIVERSITY OF MICHIGAN - T&R - SFA, Site 70082420.
+NOTE: This session is executing on the X64_10PRO  platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.2
+      SAS/ETS 14.2
+      SAS/OR 14.2
+      SAS/IML 14.2
+      SAS/QC 14.2
+
+NOTE: Additional host information:
+
+ X64_10PRO WIN 10.0.18362  Workstation
+
+NOTE: SAS initialization used:
+      real time           0.20 seconds
+      cpu time            0.21 seconds
+      
+1          %let cdir_path=.;   /* Path to current directory */
+2          
+3          filename bmt2data "&cdir_path\inc\create-bmt2-data.sas";
+4          %include bmt2data;
+
+NOTE: The data set WORK.BMT2 has 43 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+62         
+63         options nocenter;
+64         ods html file = "205-bmt2-descriptive.html" (title ="BMT2 descriptive")
+65                  path = "&cdir_path\reports2";
+NOTE: Writing HTML Body file: 205-bmt2-descriptive.html
+66         
+67         Title "Contents of BMT2 data";
+68         proc contents data=bmt2;
+69         run;
+
+NOTE: PROCEDURE CONTENTS used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+NOTE: The PROCEDURE CONTENTS printed page 1.
+
+70         
+71         Title "BMT2 data n=43";
+72         proc print data=bmt2;
+2 The SAS System                                                    15:34 Sunday, November 21, 2021
+
+73         run;
+
+NOTE: There were 43 observations read from the data set WORK.BMT2.
+NOTE: The PROCEDURE PRINT printed page 2.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+74         
+75         Title "Frequencies for selected variables";
+76         proc freq data = bmt2;
+77         tables hodgkins allo status;
+78         tables hodgkins*allo/ nopercent;
+79         run;
+
+NOTE: There were 43 observations read from the data set WORK.BMT2.
+NOTE: The PROCEDURE FREQ printed page 3.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+80         
+81         title "Descriptive stats for t variable by censored status";
+82         proc sort data=bmt2;
+83         by status;
+84         run;
+
+NOTE: There were 43 observations read from the data set WORK.BMT2.
+NOTE: The data set WORK.BMT2 has 43 observations and 6 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+85         
+86         proc means data = bmt2;
+87         var time;
+88         by status;
+89         run;
+
+NOTE: There were 43 observations read from the data set WORK.BMT2.
+NOTE: The PROCEDURE MEANS printed page 4.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+90         
+91         ods html close;
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+3 The SAS System                                                    15:34 Sunday, November 21, 2021
+
+      real time           0.65 seconds
+      cpu time            0.57 seconds
+      
