@@ -21,7 +21,7 @@
 ## Notes on Cox regression 
 
 * Proportional hazard (PH) assumption:  
-  <img src="https://render.githubusercontent.com/render/math?math=\log{(h(t \beta,\bm{x})} = \log{h_0 (t)%2Bx{\prime}\bm{\beta}">
+  <img src="https://render.githubusercontent.com/render/math?math=\log (h(t \beta,\bm{x})}">
 * Semi-parametric (because no assumptions on distribution of T) 
 * Interpretation: Effect of a covariate expressed in terms of hazard ratios (across entire time spectrum) 
 * Very popular in developing risk prediction models
