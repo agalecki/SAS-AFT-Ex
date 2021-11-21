@@ -8,7 +8,8 @@ filename bmt2data "&cdir_path\inc\create-bmt2-data.sas";
 options nocenter;
 ods html file = "215-bmt2-lifereg-estimates.html" (title ="BMT2 estimates")
          path = "&cdir_path\reports2";
-         
+
+ods exclude all;         
 Title "a: Estimates for Weibull model";
 proc lifereg data=bmt2 outest=modela covout;
    a: model time*status(0)=  &xvar /dist = weibull;
@@ -34,12 +35,13 @@ Title "e: Estimates for log-normal";
 proc lifereg data=bmt2 outest = modele covout;
    e: model time*status(0)= &xvar / dist=lnormal;
 run;
+ods exclude none;
 
 data models;
    set modela modelb modelc modeld modele;
 run;
 
-proc print data=models;
+proc print data=models (where = (_type_ = "PARMS"));
    id _model_;
    title 'Estimates for Fitted Models';
 run;
