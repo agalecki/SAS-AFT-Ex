@@ -47,14 +47,16 @@
 Interpretation of the regression coefficients in AFT model:
 
 If we increase the covariate value of <img src="https://render.githubusercontent.com/render/math?math=x_k"> by one
-unit while holding other covariate values unchanged, the corresponding average survival time will increase by
+unit while holding other covariate values unchanged, the corresponding expected survival time (median survival
+time) will increase by
 a factor of <img src="https://render.githubusercontent.com/render/math?math=\exp{(\beta_k)}">.
 
 Notes:
 
-* If the scale parameter is less than 1, the hazard increases over time.
-If the shape parameter \( p = 1 \), the hazard stays constant over time (exponential model).
-If the shape parameter \( p < 1 \), the hazard decreases over time.
+* In the Weibull Mode:
+   - If the scale parameter is less than 1, the hazard increases over time.
+   - If the scale parameter equals 1, the hazard stays constant over time (exponential model).
+   - If the scale parameter greater than 1, the hazard decreases over time.
 Pre
 REFERENCES
 
