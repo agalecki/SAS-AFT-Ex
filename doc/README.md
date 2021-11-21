@@ -24,6 +24,8 @@
   <img src="https://render.githubusercontent.com/render/math?math=\log h(t \vert \mathbf{\beta},\mathbf{x})= \log h_0(t) %2B\mathbf{x}'\mathbf{\beta}">
 * Semi-parametric (because no assumptions on distribution of T) 
 * Interpretation: Effect of a covariate expressed in terms of hazard ratios (across entire time spectrum) 
+* Extensions with time varying covariates
+* Interactions with time variable
 * Very popular in developing risk prediction models
 
 ## AFT model:
@@ -36,19 +38,24 @@
 
 | <img src="https://render.githubusercontent.com/render/math?math=\epsilon_i"> distribution | T distribution | Lifereg syntax         | Notes
 | --- | --- | ---- | ----
-| extreme value(2 params)| Weibull        | dist = Weibull     | ?
-| extreme value(1 param)| exponential     | dist = exponential | ?
+| extreme value(2 params)| Weibull        | dist = Weibull     | Meets PH assumptiond
+| extreme value(1 param)| exponential     | dist = exponential | sigma =1, Special case of Weibull
 | log-gamma           | gamma           | dist = gamma       | ?
-| logistic            | log-logistic    | dist = llogistic   | ?
+| logistic            | log-logistic    | dist = llogistic   | commonly used
 | normal              | log-normal      | dist = lnormal     | ?
 
 Interpretation of the regression coefficients in AFT model:
 
-if we increase the covariate value of <img src="https://render.githubusercontent.com/render/math?math=x_k"> by one
+If we increase the covariate value of <img src="https://render.githubusercontent.com/render/math?math=x_k"> by one
 unit while holding other covariate values unchanged, the corresponding average survival time will increase by
 a factor of <img src="https://render.githubusercontent.com/render/math?math=\exp{(\beta_k)}">.
 
+Notes:
 
+* If the scale parameter is less than 1, the hazard increases over time.
+If the shape parameter \( p = 1 \), the hazard stays constant over time (exponential model).
+If the shape parameter \( p < 1 \), the hazard decreases over time.
+Pre
 REFERENCES
 
 [Applied Survival Analysis: Parametric Survival Analysis using R](https://rstudio-pubs-static.s3.amazonaws.com/5564_bc9e2d9a458c4660aa82882df90b7a6b.html)
