@@ -1,4 +1,4 @@
-1                                         The SAS System            16:18 Sunday, November 21, 2021
+1                                         The SAS System            16:45 Sunday, November 21, 2021
 
 NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
@@ -21,7 +21,7 @@ NOTE: Additional host information:
 
 NOTE: SAS initialization used:
       real time           0.20 seconds
-      cpu time            0.18 seconds
+      cpu time            0.21 seconds
       
 1          %let cdir_path=.;   /* Path to current directory */
 2          
@@ -31,7 +31,7 @@ NOTE: SAS initialization used:
 NOTE: The data set WORK.BMT2 has 43 observations and 6 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.01 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 62         
@@ -51,9 +51,9 @@ NOTE: Algorithm converged.
 NOTE: The data set WORK.MODELA has 7 observations and 13 variables.
 NOTE: The PROCEDURE LIFEREG printed pages 1-2.
 NOTE: PROCEDURE LIFEREG used (Total process time):
-      real time           0.02 seconds
+      real time           0.03 seconds
       cpu time            0.03 seconds
-2 The SAS System                                                    16:18 Sunday, November 21, 2021
+2 The SAS System                                                    16:45 Sunday, November 21, 2021
 
       
 
@@ -68,7 +68,7 @@ NOTE: The data set WORK.MODELB has 7 observations and 13 variables.
 NOTE: The PROCEDURE LIFEREG printed pages 3-4.
 NOTE: PROCEDURE LIFEREG used (Total process time):
       real time           0.01 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 78         
@@ -82,7 +82,7 @@ NOTE: The data set WORK.MODELC has 8 observations and 14 variables.
 NOTE: The PROCEDURE LIFEREG printed pages 5-6.
 NOTE: PROCEDURE LIFEREG used (Total process time):
       real time           0.01 seconds
-      cpu time            0.03 seconds
+      cpu time            0.01 seconds
       
 
 83         
@@ -96,7 +96,7 @@ NOTE: The data set WORK.MODELD has 7 observations and 13 variables.
 NOTE: The PROCEDURE LIFEREG printed pages 7-8.
 NOTE: PROCEDURE LIFEREG used (Total process time):
       real time           0.01 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 88         
@@ -108,7 +108,7 @@ NOTE: PROCEDURE LIFEREG used (Total process time):
 
 NOTE: Algorithm converged.
 NOTE: The data set WORK.MODELE has 7 observations and 13 variables.
-3 The SAS System                                                    16:18 Sunday, November 21, 2021
+3 The SAS System                                                    16:45 Sunday, November 21, 2021
 
 NOTE: The PROCEDURE LIFEREG printed pages 9-10.
 NOTE: PROCEDURE LIFEREG used (Total process time):
@@ -129,7 +129,7 @@ NOTE: There were 7 observations read from the data set WORK.MODELE.
 NOTE: The data set WORK.MODELS has 36 observations and 14 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 98         
@@ -150,5 +150,5 @@ NOTE: PROCEDURE PRINT used (Total process time):
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
       real time           0.69 seconds
-      cpu time            0.68 seconds
+      cpu time            0.62 seconds
       

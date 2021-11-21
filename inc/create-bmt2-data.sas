@@ -2,7 +2,7 @@ data bmt2;
 /* Klein, Moschberger book p.12 */
 input allo hodgkins time status kscore wtime;
 label
-  allo     = "Transplant: 1 = allogenic. 0= autologus (0)"
+  allo     = "Transplant: 1 = allogenic. 0= autologus"
   hodgkins = "Hodgkins: 1= Hodgkins disease, 0= Non-Hodgkins lymphoma"
   time     = "Leukemia-free survival (in days)"
   status   = "Status: 1=dead or relapsed , 0= otherwise"

@@ -1,4 +1,4 @@
-a: Estimates for Weibull model                                  16:18 Sunday, November 21, 2021   1
+a: Estimates for Weibull model                                  16:45 Sunday, November 21, 2021   1
 
 The LIFEREG Procedure
 
@@ -52,7 +52,7 @@ allo              1        0.3016        0.5829
 hodgkins          1        3.5452        0.0597
 kscore            1       40.8204        <.0001
 wtime             1        1.1314        0.2875
-a: Estimates for Weibull model                                  16:18 Sunday, November 21, 2021   2
+a: Estimates for Weibull model                                  16:45 Sunday, November 21, 2021   2
 
 The LIFEREG Procedure
 
@@ -68,7 +68,7 @@ kscore         1   0.0784   0.0123   0.0543   0.1024   40.82     <.0001
 wtime          1   0.0101   0.0095  -0.0085   0.0287    1.13     0.2875
 Scale          1   1.3019   0.2083   0.9515   1.7813                   
 Weibull Shape  1   0.7681   0.1229   0.5614   1.0510                   
-b: Estimates for exponential model                              16:18 Sunday, November 21, 2021   3
+b: Estimates for exponential model                              16:45 Sunday, November 21, 2021   3
 
 The LIFEREG Procedure
 
@@ -122,7 +122,7 @@ allo              1        0.2471        0.6191
 hodgkins          1        5.0232        0.0250
 kscore            1       63.0227        <.0001
 wtime             1        1.5896        0.2074
-b: Estimates for exponential model                              16:18 Sunday, November 21, 2021   4
+b: Estimates for exponential model                              16:45 Sunday, November 21, 2021   4
 
 The LIFEREG Procedure
 
@@ -145,7 +145,7 @@ Weibull Shape  0   1.0000   0.0000   1.0000   1.0000
 Parameter     Chi-Square    Pr > ChiSq
 
 Scale             2.2690        0.1320
-c: Estimates for gamma model                                    16:18 Sunday, November 21, 2021   5
+c: Estimates for gamma model                                    16:45 Sunday, November 21, 2021   5
 
 The LIFEREG Procedure
 
@@ -199,7 +199,7 @@ allo              1        0.3414        0.5590
 hodgkins          1        2.9784        0.0844
 kscore            1        6.4232        0.0113
 wtime             1        1.1855        0.2762
-c: Estimates for gamma model                                    16:18 Sunday, November 21, 2021   6
+c: Estimates for gamma model                                    16:45 Sunday, November 21, 2021   6
 
 The LIFEREG Procedure
 
@@ -215,7 +215,7 @@ kscore         1   0.0651   0.0257   0.0148   0.1154    6.42     0.0113
 wtime          1   0.0143   0.0131  -0.0114   0.0400    1.19     0.2762
 Scale          1   1.6617   0.3086   1.1547   2.3913                   
 Shape          1  -0.1584   1.2259  -2.5611   2.2443                   
-d: Estimates for log-logistic model                             16:18 Sunday, November 21, 2021   7
+d: Estimates for log-logistic model                             16:45 Sunday, November 21, 2021   7
 
 The LIFEREG Procedure
 
@@ -269,7 +269,7 @@ allo              1        0.6203        0.4309
 hodgkins          1        3.7532        0.0527
 kscore            1       22.8195        <.0001
 wtime             1        1.3125        0.2520
-d: Estimates for log-logistic model                             16:18 Sunday, November 21, 2021   8
+d: Estimates for log-logistic model                             16:45 Sunday, November 21, 2021   8
 
 The LIFEREG Procedure
 
@@ -284,7 +284,7 @@ hodgkins       1  -1.3024   0.6723  -2.6201   0.0152    3.75     0.0527
 kscore         1   0.0681   0.0143   0.0402   0.0961   22.82     <.0001
 wtime          1   0.0124   0.0108  -0.0088   0.0336    1.31     0.2520
 Scale          1   0.9472   0.1577   0.6834   1.3127                   
-e: Estimates for log-normal                                     16:18 Sunday, November 21, 2021   9
+e: Estimates for log-normal                                     16:45 Sunday, November 21, 2021   9
 
 The LIFEREG Procedure
 
@@ -338,7 +338,7 @@ allo              1        0.5622        0.4534
 hodgkins          1        3.0519        0.0806
 kscore            1       21.1254        <.0001
 wtime             1        1.4085        0.2353
-e: Estimates for log-normal                                     16:18 Sunday, November 21, 2021  10
+e: Estimates for log-normal                                     16:45 Sunday, November 21, 2021  10
 
 The LIFEREG Procedure
 
@@ -353,7 +353,7 @@ hodgkins       1  -1.1992   0.6865  -2.5446   0.1462    3.05     0.0806
 kscore         1   0.0676   0.0147   0.0388   0.0965   21.13     <.0001
 wtime          1   0.0135   0.0114  -0.0088   0.0359    1.41     0.2353
 Scale          1   1.6336   0.2448   1.2177   2.1913                   
-Estimates for Fitted Models                                     16:18 Sunday, November 21, 2021  11
+Estimates for Fitted Models                                     16:45 Sunday, November 21, 2021  11
 
 _MODEL_    _NAME_       _TYPE_    _DIST_          _STATUS_      _LNLIKE_      time      Intercept
 
@@ -408,7 +408,7 @@ _MODEL_      allo      hodgkins      kscore       wtime       _SCALE_    _SHAPE1
    c        0.44485     0.11474     0.025514    -0.007174    -0.22494     1.50284
    d        0.47122    -1.30243     0.068114     0.012378     0.94716      .     
    d       -0.38506    -0.21008    -0.014844     0.000999    -0.02591      .     
-Estimates for Fitted Models                                     16:18 Sunday, November 21, 2021  12
+Estimates for Fitted Models                                     16:45 Sunday, November 21, 2021  12
 
 _MODEL_    _NAME_       _TYPE_    _DIST_          _STATUS_      _LNLIKE_      time      Intercept
 
