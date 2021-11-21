@@ -61,3 +61,4 @@ Pre
 REFERENCES
 
 [Applied Survival Analysis: Parametric Survival Analysis using R](https://rstudio-pubs-static.s3.amazonaws.com/5564_bc9e2d9a458c4660aa82882df90b7a6b.html)
+{Parametric Regression Model](http://www.ams.sunysb.edu/~zhu/ams588/Lecture_5_AFT.pdf)

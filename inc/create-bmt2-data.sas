@@ -8,7 +8,7 @@ label
   status   = "Status: 1=dead or relapsed , 0= otherwise"
   kscore   = "The pretransplant Karnofsky score"
   wtime    = "Waiting time to transplant (in months)"
-  
+  ;
 cards;
  1 0   28 1  90  24
  1 0   32 1  30   7 
@@ -21,7 +21,6 @@ cards;
  0 0 1560 0  80  20
  1 0 2114 0  80  27
  1 0 2144 0  90   5
- 
  0 0   42 1  80 19
  0 0   53 1  90 17
  0 0   57 1  30  9
@@ -35,14 +34,11 @@ cards;
  0 0  524 1  90 30
  0 0  924 1  90 39
  0 0 1037 0  90 84
-
- 
  1 1    2 1  20  34
  1 1    4 1  50  28
  1 1   72 1  80  59
  1 1   77 1  60 102
  1 1   79 1  70  71
- 
  0 1   30 1  90 73
  0 1   36 1  80 61
  0 1   41 1  70 34
@@ -59,3 +55,4 @@ cards;
  0 1 1290 0  90 20
  0 1 1345 0  80 98
 ;
+run;
