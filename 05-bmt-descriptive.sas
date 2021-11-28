@@ -11,13 +11,14 @@ Title "Contents of BMT data";
 proc contents data=bmt;
 run;
 
-Title "BMT data. First 10 observations";
-proc print data=bmt(obs=10);
+Title "BMT data n=43";
+proc print data=bmt;
 run;
 
 Title "Frequencies for selected variables";
 proc freq data = bmt;
-tables group status;
+tables hodgkins allo status;
+tables hodgkins*allo/ nopercent; 
 run;
 
 title "Descriptive stats for t variable by censored status";
@@ -26,7 +27,7 @@ by status;
 run;
 
 proc means data = bmt;
-var t;
+var time;
 by status;
 run;
 
