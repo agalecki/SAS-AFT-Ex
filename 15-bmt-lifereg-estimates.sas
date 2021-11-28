@@ -1,38 +1,38 @@
 %let cdir_path=.;   /* Path to current directory */ 
 
-filename bmt2data "&cdir_path\inc\create-bmt2-data.sas";
-%include bmt2data;
+filename bmtdata "&cdir_path\inc\create-bmt-data.sas";
+%include bmtdata;
 
 %let xvar = allo hodgkins kscore wtime;
 
 options nocenter;
-ods html file = "215-bmt2-lifereg-estimates.html" (title ="BMT2 estimates")
-         path = "&cdir_path\reports2";
+ods html file = "15-bmt2-lifereg-estimates.html" (title ="BMT estimates")
+         path = "&cdir_path\reports";
 
 ods exclude all;         
 Title "a: Estimates for Weibull model";
-proc lifereg data=bmt2 outest=modela covout;
+proc lifereg data=bmt outest=modela covout;
    a: model time*status(0)=  &xvar /dist = weibull;
 run;
 
 Title "b: Estimates for exponential model";
-proc lifereg data=bmt2 outest=modelb covout;
+proc lifereg data=bmt outest=modelb covout;
    b: model time*status(0) = &xvar /dist = exponential;
 run;
 
 Title "c: Estimates for gamma model";
-proc lifereg data=bmt2 outest=modelc covout;
+proc lifereg data=bmt outest=modelc covout;
    c: model time*status(0) = &xvar /dist = gamma;
 run;
 
 Title "d: Estimates for log-logistic model";
-proc lifereg data=bmt2 outest=modeld covout;
+proc lifereg data=bmt outest=modeld covout;
    d: model time*status(0) = &xvar /dist = llogistic;
 run;
 
 
 Title "e: Estimates for log-normal";
-proc lifereg data=bmt2 outest = modele covout;
+proc lifereg data=bmt outest = modele covout;
    e: model time*status(0)= &xvar / dist=lnormal;
 run;
 ods exclude none;
