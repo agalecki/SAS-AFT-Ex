@@ -1636,7 +1636,7 @@ var _ie64 = _info.indexOf("x64") > 0
 <a name="IDX"></a>
 <table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" border="0" summary="Page Layout">
 <tr>
-<td class="l systemtitle">Variale `control` created</td>
+<td class="l systemtitle">Variable `control` created</td>
 </tr>
 </table><br>
 <div class="l proctitle">The CONTENTS Procedure</div>
@@ -1655,13 +1655,13 @@ var _ie64 = _info.indexOf("x64") > 0
 <th class="l rowheader" scope="row">Data Set Name</th>
 <td class="l data">WORK.BMT</td>
 <th class="l rowheader" scope="row">Observations</th>
-<td class="l data">137</td>
+<td class="l data">43</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Member Type</th>
 <td class="l data">DATA</td>
 <th class="l rowheader" scope="row">Variables</th>
-<td class="l data">7</td>
+<td class="l data">8</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Engine</th>
@@ -1671,13 +1671,13 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Created</th>
-<td class="l data">10/30/2021 16:46:40</td>
+<td class="l data">11/28/2021 18:08:09</td>
 <th class="l rowheader" scope="row">Observation Length</th>
 <td class="l data">64</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Last Modified</th>
-<td class="l data">10/30/2021 16:46:40</td>
+<td class="l data">11/28/2021 18:08:09</td>
 <th class="l rowheader" scope="row">Deleted Observations</th>
 <td class="l data">0</td>
 </tr>
@@ -1748,7 +1748,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Obs in First Data Page</th>
-<td class="l data">137</td>
+<td class="l data">43</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Data Set Repairs</th>
@@ -1760,7 +1760,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Filename</th>
-<td class="l data">C:\Users\agalecki\AppData\Local\Temp\SAS Temporary Files\_TD8908_LTGER047_\bmt.sas7bdat</td>
+<td class="l data">C:\Users\agalecki\AppData\Local\Temp\SAS Temporary Files\_TD2672_LTGER047_\bmt.sas7bdat</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Release Created</th>
@@ -1815,52 +1815,59 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <th class="r rowheader" scope="row">1</th>
-<td class="l data">Group</td>
-<td class="l data">Char</td>
-<td class="r data">13</td>
-<td class="l data">Disease Group</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">3</th>
-<td class="l data">Status</td>
+<td class="l data">allo</td>
 <td class="l data">Num</td>
 <td class="r data">8</td>
-<td class="l data">Event Indictor: 1=Event 0=Censored</td>
+<td class="l data">Transplant: allogenic/autologus</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">2</th>
-<td class="l data">T</td>
-<td class="l data">Num</td>
-<td class="r data">8</td>
-<td class="l data">Disease-Free Survival Time</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">7</th>
+<th class="r rowheader" scope="row">8</th>
 <td class="l data">control</td>
 <td class="l data">Num</td>
 <td class="r data">8</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">4</th>
+<th class="r rowheader" scope="row">2</th>
+<td class="l data">hodgkins</td>
+<td class="l data">Num</td>
+<td class="r data">8</td>
+<td class="l data">Hodgkins disease/Non-Hodgkins lymphoma</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
 <td class="l data">idx</td>
 <td class="l data">Num</td>
 <td class="r data">8</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">6</th>
-<td class="l data">xb</td>
+<th class="r rowheader" scope="row">5</th>
+<td class="l data">kscore</td>
 <td class="l data">Num</td>
 <td class="r data">8</td>
-<td class="l data">&nbsp;</td>
+<td class="l data">The pretransplant Karnofsky score</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">5</th>
-<td class="l data">xb0</td>
+<th class="r rowheader" scope="row">4</th>
+<td class="l data">status</td>
 <td class="l data">Num</td>
 <td class="r data">8</td>
-<td class="l data">&nbsp;</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="l data">time</td>
+<td class="l data">Num</td>
+<td class="r data">8</td>
+<td class="l data">Leukemia-free survival (in days)</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="l data">wtime</td>
+<td class="l data">Num</td>
+<td class="r data">8</td>
+<td class="l data">Waiting time to transplant (in months)</td>
 </tr>
 </tbody>
 </table>
@@ -1899,13 +1906,13 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Dependent Variable</th>
-<td class="r data">Log(T)</td>
-<td class="l data">Disease-Free Survival Time</td>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Censoring Variable</th>
-<td class="r data">Status</td>
-<td class="l data">Event Indictor: 1=Event 0=Censored</td>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Censoring Value(s)</th>
@@ -1914,17 +1921,17 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Observations</th>
-<td class="r data">137</td>
+<td class="r data">43</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Noncensored Values</th>
-<td class="r data">83</td>
+<td class="r data">26</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Right Censored Values</th>
-<td class="r data">54</td>
+<td class="r data">17</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
@@ -1939,7 +1946,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Parameters</th>
-<td class="r data">5</td>
+<td class="r data">6</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
@@ -1949,7 +1956,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Log Likelihood</th>
-<td class="r data" nowrap>-226.4283634</td>
+<td class="r data" nowrap>-61.87478404</td>
 <td class="l data">&nbsp;</td>
 </tr>
 </tbody>
@@ -1968,11 +1975,11 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <th class="l rowheader" scope="row">Number of Observations Read</th>
-<td class="r data">137</td>
+<td class="r data">43</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Observations Used</th>
-<td class="r data">137</td>
+<td class="r data">43</td>
 </tr>
 </tbody>
 </table>
@@ -2000,9 +2007,14 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<td class="r data">3</td>
-<td class="l data">ALL AML-High Risk AML-Low Risk</td>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">2</td>
+<td class="l data">0 1</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">2</td>
+<td class="l data">0 1</td>
 </tr>
 </tbody>
 </table>
@@ -2025,19 +2037,19 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <td class="l data">-2 Log Likelihood</td>
-<td class="r data">452.857</td>
+<td class="r data">123.750</td>
 </tr>
 <tr>
 <td class="l data">AIC (smaller is better)</td>
-<td class="r data">462.857</td>
+<td class="r data">135.750</td>
 </tr>
 <tr>
 <td class="l data">AICC (smaller is better)</td>
-<td class="r data">463.315</td>
+<td class="r data">138.083</td>
 </tr>
 <tr>
 <td class="l data">BIC (smaller is better)</td>
-<td class="r data">477.457</td>
+<td class="r data">146.317</td>
 </tr>
 </tbody>
 </table>
@@ -2060,19 +2072,19 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <td class="l data">-2 Log Likelihood</td>
-<td class="r data">1301.032</td>
+<td class="r data">336.951</td>
 </tr>
 <tr>
 <td class="l data">Weibull AIC (smaller is better)</td>
-<td class="r data">1311.032</td>
+<td class="r data">348.951</td>
 </tr>
 <tr>
 <td class="l data">Weibull AICC (smaller is better)</td>
-<td class="r data">1311.490</td>
+<td class="r data">351.285</td>
 </tr>
 <tr>
 <td class="l data">Weibull BIC (smaller is better)</td>
-<td class="r data">1325.632</td>
+<td class="r data">359.519</td>
 </tr>
 </tbody>
 </table>
@@ -2120,16 +2132,28 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<td class="r data">2</td>
-<td class="r data">1.4006</td>
-<td class="r data">0.4964</td>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.3016</td>
+<td class="r data">0.5829</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">xb</th>
+<th class="l rowheader" scope="row">hodgkins</th>
 <td class="r data">1</td>
-<td class="r data">0.1983</td>
-<td class="r data">0.6561</td>
+<td class="r data">3.5452</td>
+<td class="r data">0.0597</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">40.8204</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.1314</td>
+<td class="r data">0.2875</td>
 </tr>
 </tbody>
 </table>
@@ -2173,38 +2197,27 @@ var _ie64 = _info.indexOf("x64") > 0
 <th class="l rowheader" scope="row">Intercept</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">7.2485</td>
-<td class="r data">1.9306</td>
-<td class="r data">3.4646</td>
-<td class="r data">11.0324</td>
-<td class="r data">14.10</td>
-<td class="r data">0.0002</td>
+<td class="r data" nowrap>-0.5573</td>
+<td class="r data">1.1052</td>
+<td class="r data" nowrap>-2.7235</td>
+<td class="r data">1.6090</td>
+<td class="r data">0.25</td>
+<td class="r data">0.6141</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<th class="l data">ALL</th>
+<th class="l rowheader" scope="row">allo</th>
+<th class="l data">0</th>
 <td class="r data">1</td>
-<td class="r data" nowrap>-1.9897</td>
-<td class="r data">2.0118</td>
-<td class="r data" nowrap>-5.9327</td>
-<td class="r data">1.9533</td>
-<td class="r data">0.98</td>
-<td class="r data">0.3227</td>
+<td class="r data" nowrap>-0.3212</td>
+<td class="r data">0.5849</td>
+<td class="r data" nowrap>-1.4677</td>
+<td class="r data">0.8252</td>
+<td class="r data">0.30</td>
+<td class="r data">0.5829</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<th class="l data">AML-High Risk</th>
-<td class="r data">1</td>
-<td class="r data" nowrap>-3.3045</td>
-<td class="r data">3.9255</td>
-<td class="r data" nowrap>-10.9984</td>
-<td class="r data">4.3894</td>
-<td class="r data">0.71</td>
-<td class="r data">0.3999</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Group</th>
-<th class="l data">AML-Low Risk</th>
+<th class="l rowheader" scope="row">allo</th>
+<th class="l data">1</th>
 <td class="r data">0</td>
 <td class="r data">0.0000</td>
 <td class="r data">.</td>
@@ -2214,24 +2227,57 @@ var _ie64 = _info.indexOf("x64") > 0
 <td class="r data">.</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">xb</th>
+<th class="l rowheader" scope="row">hodgkins</th>
+<th class="l data">0</th>
+<td class="r data">1</td>
+<td class="r data">1.2400</td>
+<td class="r data">0.6586</td>
+<td class="r data" nowrap>-0.0508</td>
+<td class="r data">2.5307</td>
+<td class="r data">3.55</td>
+<td class="r data">0.0597</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<th class="l data">1</th>
+<td class="r data">0</td>
+<td class="r data">0.0000</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">0.8589</td>
-<td class="r data">1.9290</td>
-<td class="r data" nowrap>-2.9219</td>
-<td class="r data">4.6398</td>
-<td class="r data">0.20</td>
-<td class="r data">0.6561</td>
+<td class="r data">0.0784</td>
+<td class="r data">0.0123</td>
+<td class="r data">0.0543</td>
+<td class="r data">0.1024</td>
+<td class="r data">40.82</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<th class="l data">&nbsp;</th>
+<td class="r data">1</td>
+<td class="r data">0.0101</td>
+<td class="r data">0.0095</td>
+<td class="r data" nowrap>-0.0085</td>
+<td class="r data">0.0287</td>
+<td class="r data">1.13</td>
+<td class="r data">0.2875</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Scale</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">1.6295</td>
-<td class="r data">0.1521</td>
-<td class="r data">1.3570</td>
-<td class="r data">1.9567</td>
+<td class="r data">1.3019</td>
+<td class="r data">0.2083</td>
+<td class="r data">0.9515</td>
+<td class="r data">1.7813</td>
 <td class="r data">&nbsp;</td>
 <td class="r data">&nbsp;</td>
 </tr>
@@ -2239,10 +2285,10 @@ var _ie64 = _info.indexOf("x64") > 0
 <th class="l rowheader" scope="row">Weibull Shape</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">0.6137</td>
-<td class="r data">0.0573</td>
-<td class="r data">0.5111</td>
-<td class="r data">0.7369</td>
+<td class="r data">0.7681</td>
+<td class="r data">0.1229</td>
+<td class="r data">0.5614</td>
+<td class="r data">1.0510</td>
 <td class="r data">&nbsp;</td>
 <td class="r data">&nbsp;</td>
 </tr>
@@ -2283,13 +2329,13 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Dependent Variable</th>
-<td class="r data">Log(T)</td>
-<td class="l data">Disease-Free Survival Time</td>
+<td class="r data">Log(time)</td>
+<td class="l data">Leukemia-free survival (in days)</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Censoring Variable</th>
-<td class="r data">Status</td>
-<td class="l data">Event Indictor: 1=Event 0=Censored</td>
+<td class="r data">status</td>
+<td class="l data">Status: 1=dead or relapsed , 0= otherwise</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Censoring Value(s)</th>
@@ -2298,17 +2344,17 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Observations</th>
-<td class="r data">137</td>
+<td class="r data">43</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Noncensored Values</th>
-<td class="r data">83</td>
+<td class="r data">26</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Right Censored Values</th>
-<td class="r data">54</td>
+<td class="r data">17</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
@@ -2323,7 +2369,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Parameters</th>
-<td class="r data">5</td>
+<td class="r data">6</td>
 <td class="l data">&nbsp;</td>
 </tr>
 <tr>
@@ -2333,7 +2379,7 @@ var _ie64 = _info.indexOf("x64") > 0
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Log Likelihood</th>
-<td class="r data" nowrap>-219.2104111</td>
+<td class="r data" nowrap>-61.09577117</td>
 <td class="l data">&nbsp;</td>
 </tr>
 </tbody>
@@ -2352,11 +2398,11 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <th class="l rowheader" scope="row">Number of Observations Read</th>
-<td class="r data">137</td>
+<td class="r data">43</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Number of Observations Used</th>
-<td class="r data">137</td>
+<td class="r data">43</td>
 </tr>
 </tbody>
 </table>
@@ -2384,9 +2430,14 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<td class="r data">3</td>
-<td class="l data">ALL AML-High Risk AML-Low Risk</td>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">2</td>
+<td class="l data">0 1</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<td class="r data">2</td>
+<td class="l data">0 1</td>
 </tr>
 </tbody>
 </table>
@@ -2409,19 +2460,19 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <td class="l data">-2 Log Likelihood</td>
-<td class="r data">438.421</td>
+<td class="r data">122.192</td>
 </tr>
 <tr>
 <td class="l data">AIC (smaller is better)</td>
-<td class="r data">448.421</td>
+<td class="r data">134.192</td>
 </tr>
 <tr>
 <td class="l data">AICC (smaller is better)</td>
-<td class="r data">448.879</td>
+<td class="r data">136.525</td>
 </tr>
 <tr>
 <td class="l data">BIC (smaller is better)</td>
-<td class="r data">463.021</td>
+<td class="r data">144.759</td>
 </tr>
 </tbody>
 </table>
@@ -2444,19 +2495,19 @@ var _ie64 = _info.indexOf("x64") > 0
 <tbody>
 <tr>
 <td class="l data">-2 Log Likelihood</td>
-<td class="r data">1286.596</td>
+<td class="r data">335.393</td>
 </tr>
 <tr>
 <td class="l data">Lognormal AIC (smaller is better)</td>
-<td class="r data">1296.596</td>
+<td class="r data">347.393</td>
 </tr>
 <tr>
 <td class="l data">Lognormal AICC (smaller is better)</td>
-<td class="r data">1297.054</td>
+<td class="r data">349.727</td>
 </tr>
 <tr>
 <td class="l data">Lognormal BIC (smaller is better)</td>
-<td class="r data">1311.196</td>
+<td class="r data">357.961</td>
 </tr>
 </tbody>
 </table>
@@ -2504,16 +2555,28 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<td class="r data">2</td>
-<td class="r data">2.3115</td>
-<td class="r data">0.3148</td>
+<th class="l rowheader" scope="row">allo</th>
+<td class="r data">1</td>
+<td class="r data">0.5622</td>
+<td class="r data">0.4534</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">xb</th>
+<th class="l rowheader" scope="row">hodgkins</th>
 <td class="r data">1</td>
-<td class="r data">0.9923</td>
-<td class="r data">0.3192</td>
+<td class="r data">3.0519</td>
+<td class="r data">0.0806</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
+<td class="r data">1</td>
+<td class="r data">21.1254</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<td class="r data">1</td>
+<td class="r data">1.4085</td>
+<td class="r data">0.2353</td>
 </tr>
 </tbody>
 </table>
@@ -2557,38 +2620,27 @@ var _ie64 = _info.indexOf("x64") > 0
 <th class="l rowheader" scope="row">Intercept</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">5.4010</td>
-<td class="r data">2.0192</td>
-<td class="r data">1.4434</td>
-<td class="r data">9.3586</td>
-<td class="r data">7.15</td>
-<td class="r data">0.0075</td>
+<td class="r data" nowrap>-0.4436</td>
+<td class="r data">1.1283</td>
+<td class="r data" nowrap>-2.6551</td>
+<td class="r data">1.7678</td>
+<td class="r data">0.15</td>
+<td class="r data">0.6942</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<th class="l data">ALL</th>
+<th class="l rowheader" scope="row">allo</th>
+<th class="l data">0</th>
 <td class="r data">1</td>
-<td class="r data" nowrap>-3.1018</td>
-<td class="r data">2.0861</td>
-<td class="r data" nowrap>-7.1905</td>
-<td class="r data">0.9869</td>
-<td class="r data">2.21</td>
-<td class="r data">0.1370</td>
+<td class="r data" nowrap>-0.4497</td>
+<td class="r data">0.5998</td>
+<td class="r data" nowrap>-1.6252</td>
+<td class="r data">0.7258</td>
+<td class="r data">0.56</td>
+<td class="r data">0.4534</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">Group</th>
-<th class="l data">AML-High Risk</th>
-<td class="r data">1</td>
-<td class="r data" nowrap>-5.7173</td>
-<td class="r data">4.0996</td>
-<td class="r data" nowrap>-13.7523</td>
-<td class="r data">2.3178</td>
-<td class="r data">1.94</td>
-<td class="r data">0.1631</td>
-</tr>
-<tr>
-<th class="l rowheader" scope="row">Group</th>
-<th class="l data">AML-Low Risk</th>
+<th class="l rowheader" scope="row">allo</th>
+<th class="l data">1</th>
 <td class="r data">0</td>
 <td class="r data">0.0000</td>
 <td class="r data">.</td>
@@ -2598,24 +2650,57 @@ var _ie64 = _info.indexOf("x64") > 0
 <td class="r data">.</td>
 </tr>
 <tr>
-<th class="l rowheader" scope="row">xb</th>
+<th class="l rowheader" scope="row">hodgkins</th>
+<th class="l data">0</th>
+<td class="r data">1</td>
+<td class="r data">1.1992</td>
+<td class="r data">0.6865</td>
+<td class="r data" nowrap>-0.1462</td>
+<td class="r data">2.5446</td>
+<td class="r data">3.05</td>
+<td class="r data">0.0806</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">hodgkins</th>
+<th class="l data">1</th>
+<td class="r data">0</td>
+<td class="r data">0.0000</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+<td class="r data">.</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">kscore</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">2.0092</td>
-<td class="r data">2.0170</td>
-<td class="r data" nowrap>-1.9441</td>
-<td class="r data">5.9626</td>
-<td class="r data">0.99</td>
-<td class="r data">0.3192</td>
+<td class="r data">0.0676</td>
+<td class="r data">0.0147</td>
+<td class="r data">0.0388</td>
+<td class="r data">0.0965</td>
+<td class="r data">21.13</td>
+<td class="r data">&lt;.0001</td>
+</tr>
+<tr>
+<th class="l rowheader" scope="row">wtime</th>
+<th class="l data">&nbsp;</th>
+<td class="r data">1</td>
+<td class="r data">0.0135</td>
+<td class="r data">0.0114</td>
+<td class="r data" nowrap>-0.0088</td>
+<td class="r data">0.0359</td>
+<td class="r data">1.41</td>
+<td class="r data">0.2353</td>
 </tr>
 <tr>
 <th class="l rowheader" scope="row">Scale</th>
 <th class="l data">&nbsp;</th>
 <td class="r data">1</td>
-<td class="r data">2.0343</td>
-<td class="r data">0.1726</td>
-<td class="r data">1.7227</td>
-<td class="r data">2.4024</td>
+<td class="r data">1.6336</td>
+<td class="r data">0.2448</td>
+<td class="r data">1.2177</td>
+<td class="r data">2.1913</td>
 <td class="r data">&nbsp;</td>
 <td class="r data">&nbsp;</td>
 </tr>
@@ -2652,14 +2737,16 @@ var _ie64 = _info.indexOf("x64") > 0
 <col>
 <col>
 <col>
+<col>
 </colgroup>
 <thead>
 <tr>
 <th class="r header" scope="col">idx</th>
-<th class="l header" scope="col">Group</th>
-<th class="r header" scope="col">Status</th>
-<th class="r header" scope="col">xb0</th>
-<th class="r header" scope="col">xb</th>
+<th class="r header" scope="col">allo</th>
+<th class="r header" scope="col">hodgkins</th>
+<th class="r header" scope="col">status</th>
+<th class="r header" scope="col">kscore</th>
+<th class="r header" scope="col">wtime</th>
 <th class="r header" scope="col">control</th>
 <th class="r header" scope="col">_PROB_</th>
 <th class="r header" scope="col">predtime</th>
@@ -2672,544 +2759,388 @@ var _ie64 = _info.indexOf("x64") > 0
 </thead>
 <tbody>
 <tr>
-<th class="r rowheader" scope="row">28</th>
-<td class="l data">ALL</td>
-<td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">1.84436</td>
-<td class="r data">1</td>
-<td class="r data">0.1</td>
-<td class="r data">23.95</td>
-<td class="r data">13.11</td>
-<td class="r data">3.1761</td>
-<td class="r data">0.54730</td>
-<td class="r data">58.77</td>
-<td class="r data">9.76</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">28</th>
-<td class="l data">ALL</td>
-<td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">1.84436</td>
-<td class="r data">1</td>
-<td class="r data">0.5</td>
-<td class="r data">515.83</td>
-<td class="r data">231.59</td>
-<td class="r data">6.2458</td>
-<td class="r data">0.44896</td>
-<td class="r data">1077.15</td>
-<td class="r data">247.02</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">28</th>
-<td class="l data">ALL</td>
-<td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">1.84436</td>
-<td class="r data">1</td>
-<td class="r data">0.9</td>
-<td class="r data">3648.29</td>
-<td class="r data">1729.94</td>
-<td class="r data">8.2020</td>
-<td class="r data">0.47418</td>
-<td class="r data">7939.99</td>
-<td class="r data">1676.33</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">26</th>
-<td class="l data">ALL</td>
-<td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">2.18424</td>
-<td class="r data">1</td>
-<td class="r data">0.1</td>
-<td class="r data">32.07</td>
-<td class="r data">18.17</td>
-<td class="r data">3.4681</td>
-<td class="r data">0.56664</td>
-<td class="r data">81.24</td>
-<td class="r data">12.66</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">26</th>
-<td class="l data">ALL</td>
-<td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">2.18424</td>
-<td class="r data">1</td>
-<td class="r data">0.5</td>
-<td class="r data">690.70</td>
-<td class="r data">335.98</td>
-<td class="r data">6.5377</td>
-<td class="r data">0.48644</td>
-<td class="r data">1533.74</td>
-<td class="r data">311.05</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">26</th>
-<td class="l data">ALL</td>
-<td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">2.18424</td>
-<td class="r data">1</td>
-<td class="r data">0.9</td>
-<td class="r data">4885.09</td>
-<td class="r data">2531.32</td>
-<td class="r data">8.4939</td>
-<td class="r data">0.51817</td>
-<td class="r data">11427.15</td>
-<td class="r data">2088.37</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">111</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">2.83397</td>
-<td class="r data">1</td>
-<td class="r data">0.1</td>
-<td class="r data">15.05</td>
-<td class="r data">8.52</td>
-<td class="r data">2.7113</td>
-<td class="r data">0.56626</td>
-<td class="r data">38.09</td>
-<td class="r data">5.95</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">111</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">2.83397</td>
-<td class="r data">1</td>
-<td class="r data">0.5</td>
-<td class="r data">324.07</td>
-<td class="r data">143.20</td>
-<td class="r data">5.7809</td>
-<td class="r data">0.44188</td>
-<td class="r data">668.90</td>
-<td class="r data">157.00</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">111</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">2.83397</td>
-<td class="r data">1</td>
-<td class="r data">0.9</td>
-<td class="r data">2292.00</td>
-<td class="r data">1027.73</td>
-<td class="r data">7.7372</td>
-<td class="r data">0.44840</td>
-<td class="r data">4781.71</td>
-<td class="r data">1098.61</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">106</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">3.22957</td>
-<td class="r data">1</td>
-<td class="r data">0.1</td>
-<td class="r data">21.14</td>
-<td class="r data">12.93</td>
-<td class="r data">3.0511</td>
-<td class="r data">0.61148</td>
-<td class="r data">57.62</td>
-<td class="r data">7.75</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">106</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">3.22957</td>
-<td class="r data">1</td>
-<td class="r data">0.5</td>
-<td class="r data">455.20</td>
-<td class="r data">233.99</td>
-<td class="r data">6.1207</td>
-<td class="r data">0.51403</td>
-<td class="r data">1057.59</td>
-<td class="r data">195.92</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">106</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">3.22957</td>
-<td class="r data">1</td>
-<td class="r data">0.9</td>
-<td class="r data">3219.46</td>
-<td class="r data">1703.72</td>
-<td class="r data">8.0770</td>
-<td class="r data">0.52920</td>
-<td class="r data">7668.29</td>
-<td class="r data">1351.66</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">54</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">0</td>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">0.75683</td>
+<td class="r data">30</td>
+<td class="r data">9</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">68.84</td>
-<td class="r data">42.03</td>
-<td class="r data">4.2317</td>
-<td class="r data">0.61061</td>
-<td class="r data">187.38</td>
-<td class="r data">25.29</td>
+<td class="r data">0.88</td>
+<td class="r data">0.74</td>
+<td class="r data" nowrap>-0.12622</td>
+<td class="r data">0.84343</td>
+<td class="r data">3.51</td>
+<td class="r data">0.22</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">54</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">0</td>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">0.75683</td>
+<td class="r data">30</td>
+<td class="r data">9</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">1482.32</td>
-<td class="r data">816.72</td>
-<td class="r data">7.3014</td>
-<td class="r data">0.55098</td>
-<td class="r data">3659.08</td>
-<td class="r data">600.50</td>
+<td class="r data">10.24</td>
+<td class="r data">6.53</td>
+<td class="r data">2.32637</td>
+<td class="r data">0.63737</td>
+<td class="r data">29.13</td>
+<td class="r data">3.60</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">54</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">0</td>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">0.75683</td>
+<td class="r data">30</td>
+<td class="r data">9</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">10483.89</td>
-<td class="r data">6159.15</td>
-<td class="r data">9.2576</td>
-<td class="r data">0.58749</td>
-<td class="r data">27476.17</td>
-<td class="r data">4000.26</td>
+<td class="r data">48.88</td>
+<td class="r data">29.83</td>
+<td class="r data">3.88936</td>
+<td class="r data">0.61024</td>
+<td class="r data">132.97</td>
+<td class="r data">17.97</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">48</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">41</th>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">1.20452</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">171</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">101.11</td>
-<td class="r data">58.65</td>
-<td class="r data">4.6162</td>
-<td class="r data">0.58001</td>
-<td class="r data">261.77</td>
-<td class="r data">39.06</td>
+<td class="r data">144.04</td>
+<td class="r data">172.69</td>
+<td class="r data">4.97007</td>
+<td class="r data">1.19891</td>
+<td class="r data">1028.95</td>
+<td class="r data">20.16</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">48</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">41</th>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">1.20452</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">171</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">2177.42</td>
-<td class="r data">1162.27</td>
-<td class="r data">7.6859</td>
-<td class="r data">0.53378</td>
-<td class="r data">5225.47</td>
-<td class="r data">907.31</td>
+<td class="r data">1673.48</td>
+<td class="r data">1942.93</td>
+<td class="r data">7.42266</td>
+<td class="r data">1.16101</td>
+<td class="r data">11234.21</td>
+<td class="r data">249.29</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">48</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">41</th>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">1.20452</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">171</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">15400.02</td>
-<td class="r data">8950.92</td>
-<td class="r data">9.6421</td>
-<td class="r data">0.58123</td>
-<td class="r data">39948.13</td>
-<td class="r data">5936.72</td>
+<td class="r data">7987.65</td>
+<td class="r data">9623.54</td>
+<td class="r data">8.98565</td>
+<td class="r data">1.20480</td>
+<td class="r data">57614.36</td>
+<td class="r data">1107.41</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">28</th>
-<td class="l data">ALL</td>
+<th class="r rowheader" scope="row">11</th>
 <td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">1.84436</td>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">5</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">29.90</td>
-<td class="r data">14.81</td>
-<td class="r data">3.3978</td>
-<td class="r data">0.49529</td>
-<td class="r data">67.36</td>
-<td class="r data">13.27</td>
+<td class="r data">128.67</td>
+<td class="r data">85.71</td>
+<td class="r data">4.85722</td>
+<td class="r data">0.66612</td>
+<td class="r data">383.62</td>
+<td class="r data">43.15</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">28</th>
-<td class="l data">ALL</td>
+<th class="r rowheader" scope="row">11</th>
 <td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">1.84436</td>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">5</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">405.43</td>
-<td class="r data">189.78</td>
-<td class="r data">6.0049</td>
-<td class="r data">0.46810</td>
-<td class="r data">873.60</td>
-<td class="r data">188.15</td>
+<td class="r data">1494.89</td>
+<td class="r data">852.56</td>
+<td class="r data">7.30981</td>
+<td class="r data">0.57032</td>
+<td class="r data">3809.02</td>
+<td class="r data">586.69</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">28</th>
-<td class="l data">ALL</td>
+<th class="r rowheader" scope="row">11</th>
 <td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">1.84436</td>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">5</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">5497.43</td>
-<td class="r data">2964.44</td>
-<td class="r data">8.6120</td>
-<td class="r data">0.53924</td>
-<td class="r data">13311.60</td>
-<td class="r data">2270.33</td>
+<td class="r data">7135.22</td>
+<td class="r data">4570.86</td>
+<td class="r data">8.87280</td>
+<td class="r data">0.64061</td>
+<td class="r data">20402.06</td>
+<td class="r data">2495.40</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">26</th>
-<td class="l data">ALL</td>
+<th class="r rowheader" scope="row">27</th>
 <td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">2.18424</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">60</td>
+<td class="r data">102</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">59.19</td>
-<td class="r data">31.97</td>
-<td class="r data">4.0807</td>
-<td class="r data">0.54006</td>
-<td class="r data">143.52</td>
-<td class="r data">24.41</td>
+<td class="r data">9.43</td>
+<td class="r data">8.53</td>
+<td class="r data">2.24418</td>
+<td class="r data">0.90482</td>
+<td class="r data">41.60</td>
+<td class="r data">2.14</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">26</th>
-<td class="l data">ALL</td>
+<th class="r rowheader" scope="row">27</th>
 <td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">2.18424</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">60</td>
+<td class="r data">102</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">802.59</td>
-<td class="r data">416.84</td>
-<td class="r data">6.6878</td>
-<td class="r data">0.51937</td>
-<td class="r data">1881.09</td>
-<td class="r data">342.43</td>
+<td class="r data">109.59</td>
+<td class="r data">89.02</td>
+<td class="r data">4.69677</td>
+<td class="r data">0.81232</td>
+<td class="r data">415.29</td>
+<td class="r data">28.92</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">26</th>
-<td class="l data">ALL</td>
+<th class="r rowheader" scope="row">27</th>
 <td class="r data">1</td>
-<td class="r data">2</td>
-<td class="r data">2.18424</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">60</td>
+<td class="r data">102</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">10882.74</td>
-<td class="r data">6398.56</td>
-<td class="r data">9.2949</td>
-<td class="r data">0.58796</td>
-<td class="r data">28543.36</td>
-<td class="r data">4149.27</td>
+<td class="r data">523.09</td>
+<td class="r data">443.63</td>
+<td class="r data">6.25976</td>
+<td class="r data">0.84808</td>
+<td class="r data">2101.93</td>
+<td class="r data">130.18</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">111</th>
-<td class="l data">AML-High Risk</td>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">2.83397</td>
+<td class="r data">30</td>
+<td class="r data">9</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">15.97</td>
-<td class="r data">8.13</td>
-<td class="r data">2.7707</td>
-<td class="r data">0.50903</td>
-<td class="r data">36.80</td>
-<td class="r data">6.93</td>
+<td class="r data">1.44</td>
+<td class="r data">1.33</td>
+<td class="r data">0.36327</td>
+<td class="r data">0.92829</td>
+<td class="r data">6.59</td>
+<td class="r data">0.31</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">111</th>
-<td class="l data">AML-High Risk</td>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">2.83397</td>
+<td class="r data">30</td>
+<td class="r data">9</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">216.55</td>
-<td class="r data">102.18</td>
-<td class="r data">5.3778</td>
-<td class="r data">0.47184</td>
-<td class="r data">469.50</td>
-<td class="r data">99.89</td>
+<td class="r data">11.67</td>
+<td class="r data">9.78</td>
+<td class="r data">2.45675</td>
+<td class="r data">0.83827</td>
+<td class="r data">46.13</td>
+<td class="r data">2.95</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">111</th>
-<td class="l data">AML-High Risk</td>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">0</td>
+<td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">2.83397</td>
+<td class="r data">30</td>
+<td class="r data">9</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">2936.39</td>
-<td class="r data">1564.91</td>
-<td class="r data">7.9849</td>
-<td class="r data">0.53293</td>
-<td class="r data">7037.09</td>
-<td class="r data">1225.28</td>
+<td class="r data">94.65</td>
+<td class="r data">81.46</td>
+<td class="r data">4.55023</td>
+<td class="r data">0.86057</td>
+<td class="r data">388.22</td>
+<td class="r data">23.08</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">106</th>
-<td class="l data">AML-High Risk</td>
+<th class="r rowheader" scope="row">41</th>
+<td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">3.22957</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">171</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">35.36</td>
-<td class="r data">20.26</td>
-<td class="r data">3.5656</td>
-<td class="r data">0.57289</td>
-<td class="r data">90.48</td>
-<td class="r data">13.82</td>
+<td class="r data">224.81</td>
+<td class="r data">305.51</td>
+<td class="r data">5.41524</td>
+<td class="r data">1.35898</td>
+<td class="r data">2088.00</td>
+<td class="r data">24.20</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">106</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">3.22957</td>
-<td class="r data">1</td>
-<td class="r data">0.5</td>
-<td class="r data">479.48</td>
-<td class="r data">261.17</td>
-<td class="r data">6.1727</td>
-<td class="r data">0.54470</td>
-<td class="r data">1171.46</td>
-<td class="r data">196.25</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">106</th>
-<td class="l data">AML-High Risk</td>
-<td class="r data">1</td>
-<td class="r data">3</td>
-<td class="r data">3.22957</td>
-<td class="r data">1</td>
-<td class="r data">0.9</td>
-<td class="r data">6501.52</td>
-<td class="r data">3917.48</td>
-<td class="r data">8.7798</td>
-<td class="r data">0.60255</td>
-<td class="r data">17465.28</td>
-<td class="r data">2420.21</td>
-</tr>
-<tr>
-<th class="r rowheader" scope="row">54</th>
-<td class="l data">AML-Low Risk</td>
+<th class="r rowheader" scope="row">41</th>
 <td class="r data">0</td>
 <td class="r data">1</td>
-<td class="r data">0.75683</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">171</td>
+<td class="r data">1</td>
+<td class="r data">0.5</td>
+<td class="r data">1823.89</td>
+<td class="r data">2495.11</td>
+<td class="r data">7.50872</td>
+<td class="r data">1.36802</td>
+<td class="r data">17193.37</td>
+<td class="r data">193.48</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">41</th>
+<td class="r data">0</td>
+<td class="r data">1</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">171</td>
+<td class="r data">1</td>
+<td class="r data">0.9</td>
+<td class="r data">14797.43</td>
+<td class="r data">21407.96</td>
+<td class="r data">9.60221</td>
+<td class="r data">1.44674</td>
+<td class="r data">158713.28</td>
+<td class="r data">1379.62</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="r data">1</td>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">5</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">74.78</td>
-<td class="r data">43.17</td>
-<td class="r data">4.3145</td>
-<td class="r data">0.57726</td>
-<td class="r data">192.72</td>
-<td class="r data">29.02</td>
+<td class="r data">123.58</td>
+<td class="r data">80.24</td>
+<td class="r data">4.81691</td>
+<td class="r data">0.64927</td>
+<td class="r data">358.42</td>
+<td class="r data">42.61</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">54</th>
-<td class="l data">AML-Low Risk</td>
-<td class="r data">0</td>
+<th class="r rowheader" scope="row">11</th>
 <td class="r data">1</td>
-<td class="r data">0.75683</td>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">5</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">1013.98</td>
-<td class="r data">575.41</td>
-<td class="r data">6.9216</td>
-<td class="r data">0.56747</td>
-<td class="r data">2571.63</td>
-<td class="r data">399.81</td>
+<td class="r data">1002.64</td>
+<td class="r data">651.55</td>
+<td class="r data">6.91039</td>
+<td class="r data">0.64984</td>
+<td class="r data">2910.63</td>
+<td class="r data">345.38</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">54</th>
-<td class="l data">AML-Low Risk</td>
-<td class="r data">0</td>
+<th class="r rowheader" scope="row">11</th>
 <td class="r data">1</td>
-<td class="r data">0.75683</td>
+<td class="r data">0</td>
+<td class="r data">0</td>
+<td class="r data">90</td>
+<td class="r data">5</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">13749.17</td>
-<td class="r data">8789.65</td>
-<td class="r data">9.5287</td>
-<td class="r data">0.63929</td>
-<td class="r data">39228.63</td>
-<td class="r data">4818.92</td>
+<td class="r data">8134.55</td>
+<td class="r data">6404.73</td>
+<td class="r data">9.00388</td>
+<td class="r data">0.78735</td>
+<td class="r data">29588.14</td>
+<td class="r data">2236.40</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">48</th>
-<td class="l data">AML-Low Risk</td>
-<td class="r data">0</td>
+<th class="r rowheader" scope="row">27</th>
 <td class="r data">1</td>
-<td class="r data">1.20452</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">60</td>
+<td class="r data">102</td>
 <td class="r data">1</td>
 <td class="r data">0.1</td>
-<td class="r data">183.84</td>
-<td class="r data">100.73</td>
-<td class="r data">5.2141</td>
-<td class="r data">0.54792</td>
-<td class="r data">451.53</td>
-<td class="r data">74.85</td>
+<td class="r data">18.21</td>
+<td class="r data">15.00</td>
+<td class="r data">2.90182</td>
+<td class="r data">0.82411</td>
+<td class="r data">70.34</td>
+<td class="r data">4.71</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">48</th>
-<td class="l data">AML-Low Risk</td>
-<td class="r data">0</td>
+<th class="r rowheader" scope="row">27</th>
 <td class="r data">1</td>
-<td class="r data">1.20452</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">60</td>
+<td class="r data">102</td>
 <td class="r data">1</td>
 <td class="r data">0.5</td>
-<td class="r data">2492.77</td>
-<td class="r data">1353.12</td>
-<td class="r data">7.8212</td>
-<td class="r data">0.54282</td>
-<td class="r data">6071.54</td>
-<td class="r data">1023.45</td>
+<td class="r data">147.72</td>
+<td class="r data">118.03</td>
+<td class="r data">4.99530</td>
+<td class="r data">0.79903</td>
+<td class="r data">547.69</td>
+<td class="r data">39.84</td>
 </tr>
 <tr>
-<th class="r rowheader" scope="row">48</th>
-<td class="l data">AML-Low Risk</td>
-<td class="r data">0</td>
+<th class="r rowheader" scope="row">27</th>
 <td class="r data">1</td>
-<td class="r data">1.20452</td>
+<td class="r data">1</td>
+<td class="r data">1</td>
+<td class="r data">60</td>
+<td class="r data">102</td>
 <td class="r data">1</td>
 <td class="r data">0.9</td>
-<td class="r data">33801.01</td>
-<td class="r data">21025.77</td>
-<td class="r data">10.4282</td>
-<td class="r data">0.62205</td>
-<td class="r data">93751.31</td>
-<td class="r data">12186.59</td>
+<td class="r data">1198.45</td>
+<td class="r data">1068.32</td>
+<td class="r data">7.08878</td>
+<td class="r data">0.89142</td>
+<td class="r data">5170.46</td>
+<td class="r data">277.79</td>
 </tr>
 </tbody>
 </table>

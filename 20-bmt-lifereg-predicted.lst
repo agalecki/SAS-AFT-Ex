@@ -1,17 +1,17 @@
-Variale `control` created                                                                         1
+Variable `control` created                                      18:08 Sunday, November 28, 2021   1
 
 The CONTENTS Procedure
 
-Data Set Name        WORK.BMT                      Observations          137
-Member Type          DATA                          Variables             7  
-Engine               V9                            Indexes               0  
-Created              10/30/2021 16:46:40           Observation Length    64 
-Last Modified        10/30/2021 16:46:40           Deleted Observations  0  
-Protection                                         Compressed            NO 
-Data Set Type                                      Sorted                NO 
-Label                                                                       
-Data Representation  WINDOWS_64                                             
-Encoding             wlatin1  Western (Windows)                             
+Data Set Name        WORK.BMT                      Observations          43
+Member Type          DATA                          Variables             8 
+Engine               V9                            Indexes               0 
+Created              11/28/2021 18:08:09           Observation Length    64
+Last Modified        11/28/2021 18:08:09           Deleted Observations  0 
+Protection                                         Compressed            NO
+Data Set Type                                      Sorted                NO
+Label                                                                      
+Data Representation  WINDOWS_64                                            
+Encoding             wlatin1  Western (Windows)                            
 
 
                                  Engine/Host Dependent Information
@@ -20,11 +20,11 @@ Data Set Page Size          65536
 Number of Data Set Pages    1                                                                      
 First Data Page             1                                                                      
 Max Obs per Page            1021                                                                   
-Obs in First Data Page      137                                                                    
+Obs in First Data Page      43                                                                     
 Number of Data Set Repairs  0                                                                      
 ExtendObsCounter            YES                                                                    
 Filename                    C:\Users\agalecki\AppData\Local\Temp\SAS Temporary                     
-                            Files\_TD8908_LTGER047_\bmt.sas7bdat                                   
+                            Files\_TD2672_LTGER047_\bmt.sas7bdat                                   
 Release Created             9.0401M4                                                               
 Host Created                X64_10PRO                                                              
 Owner Name                  UMHS\agalecki                                                          
@@ -32,70 +32,70 @@ File Size                   128KB
 File Size (bytes)           131072                                                                 
 
 
-            Alphabetic List of Variables and Attributes
+               Alphabetic List of Variables and Attributes
  
 #    Variable    Type    Len    Label
 
-1    Group       Char     13    Disease Group                     
-3    Status      Num       8    Event Indictor: 1=Event 0=Censored
-2    T           Num       8    Disease-Free Survival Time        
-7    control     Num       8                                      
-4    idx         Num       8                                      
-6    xb          Num       8                                      
-5    xb0         Num       8                                      
-a: Weibull model. Predicted values.                                                               2
+1    allo        Num       8    Transplant: allogenic/autologus          
+8    control     Num       8                                             
+2    hodgkins    Num       8    Hodgkins disease/Non-Hodgkins lymphoma   
+7    idx         Num       8                                             
+5    kscore      Num       8    The pretransplant Karnofsky score        
+4    status      Num       8    Status: 1=dead or relapsed , 0= otherwise
+3    time        Num       8    Leukemia-free survival (in days)         
+6    wtime       Num       8    Waiting time to transplant (in months)   
+a: Weibull model. Predicted values.                             18:08 Sunday, November 28, 2021   2
 
 The LIFEREG Procedure
 
                           Model Information
 
 Data Set                        WORK.BMT                             
-Dependent Variable                Log(T)    Disease-Free             
-                                            Survival Time            
-Censoring Variable                Status    Event Indictor: 1=Event  
-                                            0=Censored               
+Dependent Variable             Log(time)    Leukemia-free survival   
+                                            (in days)                
+Censoring Variable                status    Status: 1=dead or        
+                                            relapsed , 0= otherwise  
 Censoring Value(s)                     0                             
-Number of Observations               137                             
-Noncensored Values                    83                             
-Right Censored Values                 54                             
+Number of Observations                43                             
+Noncensored Values                    26                             
+Right Censored Values                 17                             
 Left Censored Values                   0                             
 Interval Censored Values               0                             
-Number of Parameters                   5                             
+Number of Parameters                   6                             
 Name of Distribution             Weibull                             
-Log Likelihood              -226.4283634                             
+Log Likelihood              -61.87478404                             
 
 
-Number of Observations Read         137
-Number of Observations Used         137
+Number of Observations Read          43
+Number of Observations Used          43
 
 
-              Class Level Information
+   Class Level Information
  
-Name       Levels    Values
+Name          Levels    Values
 
-Group           3    ALL AML-High Risk AML-Low Risk 
+allo               2    0 1   
+hodgkins           2    0 1   
 
 
            Fit Statistics
 
--2 Log Likelihood             452.857
-AIC (smaller is better)       462.857
-AICC (smaller is better)      463.315
-BIC (smaller is better)       477.457
+-2 Log Likelihood             123.750
+AIC (smaller is better)       135.750
+AICC (smaller is better)      138.083
+BIC (smaller is better)       146.317
 
 
      Fit Statistics (Unlogged Response)
 
--2 Log Likelihood                    1301.032
-Weibull AIC (smaller is better)      1311.032
-Weibull AICC (smaller is better)     1311.490
-Weibull BIC (smaller is better)      1325.632
+-2 Log Likelihood                     336.951
+Weibull AIC (smaller is better)       348.951
+Weibull AICC (smaller is better)      351.285
+Weibull BIC (smaller is better)       359.519
 
 
 Algorithm converged.                                                       
-
-
-a: Weibull model. Predicted values.                                                               3
+a: Weibull model. Predicted values.                             18:08 Sunday, November 28, 2021   3
 
 The LIFEREG Procedure
 
@@ -104,75 +104,78 @@ The LIFEREG Procedure
                              Wald
 Effect           DF    Chi-Square    Pr > ChiSq
 
-Group             2        1.4006        0.4964
-xb                1        0.1983        0.6561
+allo              1        0.3016        0.5829
+hodgkins          1        3.5452        0.0597
+kscore            1       40.8204        <.0001
+wtime             1        1.1314        0.2875
 
 
-                 Analysis of Maximum Likelihood Parameter Estimates
+           Analysis of Maximum Likelihood Parameter Estimates
  
-                                        Standard   95% Confidence     Chi-
-Parameter                   DF Estimate    Error       Limits       Square Pr > ChiSq
+                            Standard   95% Confidence     Chi-
+Parameter       DF Estimate    Error       Limits       Square Pr > ChiSq
 
-Intercept                    1   7.2485   1.9306   3.4646  11.0324   14.10     0.0002
-Group         ALL            1  -1.9897   2.0118  -5.9327   1.9533    0.98     0.3227
-Group         AML-High Risk  1  -3.3045   3.9255 -10.9984   4.3894    0.71     0.3999
-Group         AML-Low Risk   0   0.0000    .        .        .         .        .    
-xb                           1   0.8589   1.9290  -2.9219   4.6398    0.20     0.6561
-Scale                        1   1.6295   0.1521   1.3570   1.9567                   
-Weibull Shape                1   0.6137   0.0573   0.5111   0.7369                   
-b: Log-normal model. Predicted values                                                             4
+Intercept        1  -0.5573   1.1052  -2.7235   1.6090    0.25     0.6141
+allo          0  1  -0.3212   0.5849  -1.4677   0.8252    0.30     0.5829
+allo          1  0   0.0000    .        .        .         .        .    
+hodgkins      0  1   1.2400   0.6586  -0.0508   2.5307    3.55     0.0597
+hodgkins      1  0   0.0000    .        .        .         .        .    
+kscore           1   0.0784   0.0123   0.0543   0.1024   40.82     <.0001
+wtime            1   0.0101   0.0095  -0.0085   0.0287    1.13     0.2875
+Scale            1   1.3019   0.2083   0.9515   1.7813                   
+Weibull Shape    1   0.7681   0.1229   0.5614   1.0510                   
+b: Log-normal model. Predicted values                           18:08 Sunday, November 28, 2021   4
 
 The LIFEREG Procedure
 
                           Model Information
 
 Data Set                        WORK.BMT                             
-Dependent Variable                Log(T)    Disease-Free             
-                                            Survival Time            
-Censoring Variable                Status    Event Indictor: 1=Event  
-                                            0=Censored               
+Dependent Variable             Log(time)    Leukemia-free survival   
+                                            (in days)                
+Censoring Variable                status    Status: 1=dead or        
+                                            relapsed , 0= otherwise  
 Censoring Value(s)                     0                             
-Number of Observations               137                             
-Noncensored Values                    83                             
-Right Censored Values                 54                             
+Number of Observations                43                             
+Noncensored Values                    26                             
+Right Censored Values                 17                             
 Left Censored Values                   0                             
 Interval Censored Values               0                             
-Number of Parameters                   5                             
+Number of Parameters                   6                             
 Name of Distribution           Lognormal                             
-Log Likelihood              -219.2104111                             
+Log Likelihood              -61.09577117                             
 
 
-Number of Observations Read         137
-Number of Observations Used         137
+Number of Observations Read          43
+Number of Observations Used          43
 
 
-              Class Level Information
+   Class Level Information
  
-Name       Levels    Values
+Name          Levels    Values
 
-Group           3    ALL AML-High Risk AML-Low Risk 
+allo               2    0 1   
+hodgkins           2    0 1   
 
 
            Fit Statistics
 
--2 Log Likelihood             438.421
-AIC (smaller is better)       448.421
-AICC (smaller is better)      448.879
-BIC (smaller is better)       463.021
+-2 Log Likelihood             122.192
+AIC (smaller is better)       134.192
+AICC (smaller is better)      136.525
+BIC (smaller is better)       144.759
 
 
       Fit Statistics (Unlogged Response)
 
--2 Log Likelihood                      1286.596
-Lognormal AIC (smaller is better)      1296.596
-Lognormal AICC (smaller is better)     1297.054
-Lognormal BIC (smaller is better)      1311.196
+-2 Log Likelihood                       335.393
+Lognormal AIC (smaller is better)       347.393
+Lognormal AICC (smaller is better)      349.727
+Lognormal BIC (smaller is better)       357.961
 
 
 Algorithm converged.                                                       
-
-
-b: Log-normal model. Predicted values                                                             5
+b: Log-normal model. Predicted values                           18:08 Sunday, November 28, 2021   5
 
 The LIFEREG Procedure
 
@@ -181,65 +184,57 @@ The LIFEREG Procedure
                              Wald
 Effect           DF    Chi-Square    Pr > ChiSq
 
-Group             2        2.3115        0.3148
-xb                1        0.9923        0.3192
+allo              1        0.5622        0.4534
+hodgkins          1        3.0519        0.0806
+kscore            1       21.1254        <.0001
+wtime             1        1.4085        0.2353
 
 
-                 Analysis of Maximum Likelihood Parameter Estimates
+           Analysis of Maximum Likelihood Parameter Estimates
  
-                                        Standard   95% Confidence     Chi-
-Parameter                   DF Estimate    Error       Limits       Square Pr > ChiSq
+                            Standard   95% Confidence     Chi-
+Parameter       DF Estimate    Error       Limits       Square Pr > ChiSq
 
-Intercept                    1   5.4010   2.0192   1.4434   9.3586    7.15     0.0075
-Group         ALL            1  -3.1018   2.0861  -7.1905   0.9869    2.21     0.1370
-Group         AML-High Risk  1  -5.7173   4.0996 -13.7523   2.3178    1.94     0.1631
-Group         AML-Low Risk   0   0.0000    .        .        .         .        .    
-xb                           1   2.0092   2.0170  -1.9441   5.9626    0.99     0.3192
-Scale                        1   2.0343   0.1726   1.7227   2.4024                   
-Quantile Estimates and Confidence Limits                                                          6
+Intercept        1  -0.4436   1.1283  -2.6551   1.7678    0.15     0.6942
+allo          0  1  -0.4497   0.5998  -1.6252   0.7258    0.56     0.4534
+allo          1  0   0.0000    .        .        .         .        .    
+hodgkins      0  1   1.1992   0.6865  -0.1462   2.5446    3.05     0.0806
+hodgkins      1  0   0.0000    .        .        .         .        .    
+kscore           1   0.0676   0.0147   0.0388   0.0965   21.13     <.0001
+wtime            1   0.0135   0.0114  -0.0088   0.0359    1.41     0.2353
+Scale            1   1.6336   0.2448   1.2177   2.1913                   
+Quantile Estimates and Confidence Limits                        18:08 Sunday, November 28, 2021   6
 
-                                               p
-                                   c           r
-                    S              o   _       e
-           G        t              n   P       d                  l                  u         l
-           r        a              t   R       t                  t        s         p         o
- i         o        t  x           r   O       i         s        i        t         p         w
- d         u        u  b     x     o   B       m         t        m        d         e         e
- x         p        s  0     b     l   _       e         d        e        e         r         r
+       h                          p
+       o              c           r
+       d  s   k       o   _       e
+       g  t   s   w   n   P       d                   l                  u         l
+    a  k  a   c   t   t   R       t                   t        s         p         o
+ i  l  i  t   o   i   r   O       i         s         i        t         p         w
+ d  l  n  u   r   m   o   B       m         t         m        d         e         e
+ x  o  s  s   e   e   l   _       e         d         e        e         r         r
 
- 28  ALL            1  2  1.84436  1  0.1     23.95     13.11   3.1761  0.54730     58.77      9.76
- 28  ALL            1  2  1.84436  1  0.5    515.83    231.59   6.2458  0.44896   1077.15    247.02
- 28  ALL            1  2  1.84436  1  0.9   3648.29   1729.94   8.2020  0.47418   7939.99   1676.33
- 26  ALL            1  2  2.18424  1  0.1     32.07     18.17   3.4681  0.56664     81.24     12.66
- 26  ALL            1  2  2.18424  1  0.5    690.70    335.98   6.5377  0.48644   1533.74    311.05
- 26  ALL            1  2  2.18424  1  0.9   4885.09   2531.32   8.4939  0.51817  11427.15   2088.37
-111  AML-High Risk  1  3  2.83397  1  0.1     15.05      8.52   2.7113  0.56626     38.09      5.95
-111  AML-High Risk  1  3  2.83397  1  0.5    324.07    143.20   5.7809  0.44188    668.90    157.00
-111  AML-High Risk  1  3  2.83397  1  0.9   2292.00   1027.73   7.7372  0.44840   4781.71   1098.61
-106  AML-High Risk  1  3  3.22957  1  0.1     21.14     12.93   3.0511  0.61148     57.62      7.75
-106  AML-High Risk  1  3  3.22957  1  0.5    455.20    233.99   6.1207  0.51403   1057.59    195.92
-106  AML-High Risk  1  3  3.22957  1  0.9   3219.46   1703.72   8.0770  0.52920   7668.29   1351.66
- 54  AML-Low Risk   0  1  0.75683  1  0.1     68.84     42.03   4.2317  0.61061    187.38     25.29
- 54  AML-Low Risk   0  1  0.75683  1  0.5   1482.32    816.72   7.3014  0.55098   3659.08    600.50
- 54  AML-Low Risk   0  1  0.75683  1  0.9  10483.89   6159.15   9.2576  0.58749  27476.17   4000.26
- 48  AML-Low Risk   0  1  1.20452  1  0.1    101.11     58.65   4.6162  0.58001    261.77     39.06
- 48  AML-Low Risk   0  1  1.20452  1  0.5   2177.42   1162.27   7.6859  0.53378   5225.47    907.31
- 48  AML-Low Risk   0  1  1.20452  1  0.9  15400.02   8950.92   9.6421  0.58123  39948.13   5936.72
- 28  ALL            1  2  1.84436  1  0.1     29.90     14.81   3.3978  0.49529     67.36     13.27
- 28  ALL            1  2  1.84436  1  0.5    405.43    189.78   6.0049  0.46810    873.60    188.15
- 28  ALL            1  2  1.84436  1  0.9   5497.43   2964.44   8.6120  0.53924  13311.60   2270.33
- 26  ALL            1  2  2.18424  1  0.1     59.19     31.97   4.0807  0.54006    143.52     24.41
- 26  ALL            1  2  2.18424  1  0.5    802.59    416.84   6.6878  0.51937   1881.09    342.43
- 26  ALL            1  2  2.18424  1  0.9  10882.74   6398.56   9.2949  0.58796  28543.36   4149.27
-111  AML-High Risk  1  3  2.83397  1  0.1     15.97      8.13   2.7707  0.50903     36.80      6.93
-111  AML-High Risk  1  3  2.83397  1  0.5    216.55    102.18   5.3778  0.47184    469.50     99.89
-111  AML-High Risk  1  3  2.83397  1  0.9   2936.39   1564.91   7.9849  0.53293   7037.09   1225.28
-106  AML-High Risk  1  3  3.22957  1  0.1     35.36     20.26   3.5656  0.57289     90.48     13.82
-106  AML-High Risk  1  3  3.22957  1  0.5    479.48    261.17   6.1727  0.54470   1171.46    196.25
-106  AML-High Risk  1  3  3.22957  1  0.9   6501.52   3917.48   8.7798  0.60255  17465.28   2420.21
- 54  AML-Low Risk   0  1  0.75683  1  0.1     74.78     43.17   4.3145  0.57726    192.72     29.02
- 54  AML-Low Risk   0  1  0.75683  1  0.5   1013.98    575.41   6.9216  0.56747   2571.63    399.81
- 54  AML-Low Risk   0  1  0.75683  1  0.9  13749.17   8789.65   9.5287  0.63929  39228.63   4818.92
- 48  AML-Low Risk   0  1  1.20452  1  0.1    183.84    100.73   5.2141  0.54792    451.53     74.85
- 48  AML-Low Risk   0  1  1.20452  1  0.5   2492.77   1353.12   7.8212  0.54282   6071.54   1023.45
- 48  AML-Low Risk   0  1  1.20452  1  0.9  33801.01  21025.77  10.4282  0.62205  93751.31  12186.59
+14  0  0  1  30    9  1  0.1      0.88      0.74  -0.12622  0.84343       3.51     0.22
+14  0  0  1  30    9  1  0.5     10.24      6.53   2.32637  0.63737      29.13     3.60
+14  0  0  1  30    9  1  0.9     48.88     29.83   3.88936  0.61024     132.97    17.97
+41  0  1  0  90  171  1  0.1    144.04    172.69   4.97007  1.19891    1028.95    20.16
+41  0  1  0  90  171  1  0.5   1673.48   1942.93   7.42266  1.16101   11234.21   249.29
+41  0  1  0  90  171  1  0.9   7987.65   9623.54   8.98565  1.20480   57614.36  1107.41
+11  1  0  0  90    5  1  0.1    128.67     85.71   4.85722  0.66612     383.62    43.15
+11  1  0  0  90    5  1  0.5   1494.89    852.56   7.30981  0.57032    3809.02   586.69
+11  1  0  0  90    5  1  0.9   7135.22   4570.86   8.87280  0.64061   20402.06  2495.40
+27  1  1  1  60  102  1  0.1      9.43      8.53   2.24418  0.90482      41.60     2.14
+27  1  1  1  60  102  1  0.5    109.59     89.02   4.69677  0.81232     415.29    28.92
+27  1  1  1  60  102  1  0.9    523.09    443.63   6.25976  0.84808    2101.93   130.18
+14  0  0  1  30    9  1  0.1      1.44      1.33   0.36327  0.92829       6.59     0.31
+14  0  0  1  30    9  1  0.5     11.67      9.78   2.45675  0.83827      46.13     2.95
+14  0  0  1  30    9  1  0.9     94.65     81.46   4.55023  0.86057     388.22    23.08
+41  0  1  0  90  171  1  0.1    224.81    305.51   5.41524  1.35898    2088.00    24.20
+41  0  1  0  90  171  1  0.5   1823.89   2495.11   7.50872  1.36802   17193.37   193.48
+41  0  1  0  90  171  1  0.9  14797.43  21407.96   9.60221  1.44674  158713.28  1379.62
+11  1  0  0  90    5  1  0.1    123.58     80.24   4.81691  0.64927     358.42    42.61
+11  1  0  0  90    5  1  0.5   1002.64    651.55   6.91039  0.64984    2910.63   345.38
+11  1  0  0  90    5  1  0.9   8134.55   6404.73   9.00388  0.78735   29588.14  2236.40
+27  1  1  1  60  102  1  0.1     18.21     15.00   2.90182  0.82411      70.34     4.71
+27  1  1  1  60  102  1  0.5    147.72    118.03   4.99530  0.79903     547.69    39.84
+27  1  1  1  60  102  1  0.9   1198.45   1068.32   7.08878  0.89142    5170.46   277.79

@@ -1,7 +1,8 @@
 data bmt;
-/* Klein, Moschberger book p.12 */
-input allo hodgkins time status kscore wtime;
-label
+  /* Klein, Moschberger book p.12 */
+  input allo hodgkins time status kscore wtime;
+  idx = _n_;
+  label
   allo     = "Transplant: allogenic/autologus"
   hodgkins = "Hodgkins disease/Non-Hodgkins lymphoma"
   time     = "Leukemia-free survival (in days)"
