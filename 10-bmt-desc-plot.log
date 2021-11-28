@@ -1,4 +1,4 @@
-1                                         The SAS System           09:45 Saturday, October 30, 2021
+1                                         The SAS System            15:15 Sunday, November 28, 2021
 
 NOTE: Copyright (c) 2002-2012 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M4) 
@@ -20,7 +20,7 @@ NOTE: Additional host information:
  X64_10PRO WIN 10.0.18362  Workstation
 
 NOTE: SAS initialization used:
-      real time           0.27 seconds
+      real time           0.24 seconds
       cpu time            0.26 seconds
       
 1          %let cdir_path=.;   /* Path to current directory */
@@ -28,60 +28,59 @@ NOTE: SAS initialization used:
 3          filename bmtdata "&cdir_path\inc\create-bmt-data.sas";
 4          %include bmtdata;
 
-NOTE: There were 137 observations read from the data set SASHELP.BMT.
-NOTE: The data set WORK.BMT has 137 observations and 6 variables.
+NOTE: The data set WORK.BMT has 43 observations and 6 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.02 seconds
+      real time           0.01 seconds
       cpu time            0.01 seconds
       
 
-22         
-23         /*
-24         Based on
-24       ! https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/grstatug/p0cmojsdkiab8cn1k2qk3rp3
-24       ! a8s0.htm
-25         */
-26         
-27         %let report_name= 10-bmt-desc-plot;
-28         
-29         options nocenter;
-30         ods graphics / reset imagename="&report_name" outputfmt=png;
-31         ods _all_ close;
-32         
-33         ods html file  = "&report_name..html" (title = "BMT desc-plot")
-34                  path  = "&cdir_path\reports"
-35                  gpath = "&cdir_path\reports" (URL = none)
-36                  ;
+62         
+63         /*
+64         Based on
+64       ! https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/grstatug/p0cmojsdkiab8cn1k2qk3rp3
+64       ! a8s0.htm
+65         */
+66         
+67         %let report_name= 10-bmt-desc-plot;
+68         
+69         options nocenter;
+70         ods graphics / reset imagename="&report_name" outputfmt=png;
+71         ods _all_ close;
+72         
+73         ods html file  = "&report_name..html" (title = "BMT desc-plot")
+74                  path  = "&cdir_path\reports"
+75                  gpath = "&cdir_path\reports" (URL = none)
+76                  ;
 NOTE: Writing HTML Body file: 10-bmt-desc-plot.html
-2 The SAS System                                                   09:45 Saturday, October 30, 2021
+77         
+2 The SAS System                                                    15:15 Sunday, November 28, 2021
 
-37         
-38         *ods graphics on;
-39         
-40         /*
-41            product-limit estimates of infection time
-42            based on https://support.sas.com/resources/papers/proceedings10/252-2010.pdf
-43         */
-44         proc lifetest data=bmt
-45         plots=survival(nocensor cb=hw cl strata=panel atrisk=0 to 600 by 50);
-46         strata group;
-47         time t*status(0);
-48         
-49         run;
+78         *ods graphics on;
+79         
+80         /*
+81            product-limit estimates of infection time
+82            based on https://support.sas.com/resources/papers/proceedings10/252-2010.pdf
+83         */
+84         proc lifetest data=bmt
+85         plots=survival(nocensor cb=hw cl strata=panel atrisk=0 to 1000 by 50);
+86         strata hodgkins;
+87         time time*status(0);
+88         
+89         run;
 
 NOTE: The LOGLOG transform is used to compute the confidence limits for the quartiles of the 
       survivor distribution and the confidence limit for the survivor function. To suppress using 
       this transform, specify CONFTYPE=LINEAR in the PROC LIFETEST statement.
 NOTE: PROCEDURE LIFETEST used (Total process time):
-      real time           2.25 seconds
-      cpu time            0.37 seconds
+      real time           2.98 seconds
+      cpu time            0.31 seconds
       
 
-50         * ods graphics off;
-51         
-52         ods html close;
+90         * ods graphics off;
+91         
+92         ods html close;
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           2.95 seconds
-      cpu time            1.03 seconds
+      real time           3.60 seconds
+      cpu time            0.85 seconds
       

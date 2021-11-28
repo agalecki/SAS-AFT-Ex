@@ -25,9 +25,9 @@ ods html file  = "&report_name..html" (title = "BMT desc-plot")
    based on https://support.sas.com/resources/papers/proceedings10/252-2010.pdf
 */
 proc lifetest data=bmt
-plots=survival(nocensor cb=hw cl strata=panel atrisk=0 to 600 by 50);
-strata group;
-time t*status(0);
+plots=survival(nocensor cb=hw cl strata=panel atrisk=0 to 1000 by 50);
+strata hodgkins;
+time time*status(0);
 
 run;
 * ods graphics off;
