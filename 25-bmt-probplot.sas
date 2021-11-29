@@ -9,24 +9,15 @@ Based on https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/grstatug/p0cmojs
 
 %let report_name= 25-bmt-probplot;
 
-Title "xdata for probplot";
+Title "xdata for probplot (one row)";
 data uxdata;
- length group $ 15;
- xb = 2;
- group = "AML-High Risk"; 
- output;
- 
- group = "ALL";
- output;
- 
- group = "AML-Low Risk";
+ allo =1;
+ hodgkins =0;
+ kscore = 50;
+ wtime=10;
  output;
 run;
 
-data uxdata1;
-  set uxdata;
-  if _n_=3; /* Select one row *?
-run;
 
 options nocenter;
 ods graphics / reset imagename="&report_name" outputfmt=png;
@@ -37,13 +28,13 @@ ods html file  = "&report_name..html" (title = "25-BMT probplot")
          gpath = "&cdir_path\reports" (URL = none)         
          ;
 Title "uxdata";
-proc print data=uxdata1;
+proc print data=uxdata;
 run;
 
 Title "Weibull model with probplot";
-proc lifereg data=bmt xdata = uxdata1;
-   class group;
-   a: model t*status(0)= group xb / dist = weibull;
+proc lifereg data=bmt xdata = uxdata;
+   class allo hodgkins;
+   a: model time*status(0)= allo hodgkins kscore wtime / dist = weibull;
    probplot  / nodata
        plower=.5
        vref(intersect) = 75
